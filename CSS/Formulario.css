@@ -1,0 +1,193 @@
+.containerBody{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.headerform{
+    background: #FFFFFF;
+    width: 100%;
+    height: 180%;
+    position: relative;
+    
+}
+
+.containerImgIcono{
+    padding: 20px;
+    display: -webkit-box;
+}
+.containerImgIcono h3{
+    margin: 10px 10px 10px 30px;
+}
+.ContenedorFormulario{
+    background: #e6e3f0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    
+}
+
+
+
+.formularioHeader{
+    background: #5d45aa;
+    height: 210px;
+    width: 70%;
+    margin: 40px 0px 10px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+.paralelogramo {
+    width: auto; 
+    height: auto; 
+    padding-right: 2%;
+    padding-left: 2%;
+    border: 3px solid rgb(255, 255, 255); 
+    background: #FFFFFF;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(-20deg);
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 100px;
+}
+
+.paralelogramo p{
+    font-size: 9vh;
+    color: #5d45aa;
+    font-weight: bold;
+}
+
+.TituloCAC{
+    height: 100%;
+    color: white;    
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    position: absolute;
+}
+.Nomnbre{
+    font-size: 6vh;
+}
+
+
+
+.formularioFeedBack{
+    background: white;
+    height: 210px;
+    width: 70%;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+white-space: break-word;
+}
+
+.linear{
+    background: #5d45aa;
+    height: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.feedBack h2{
+    font-weight: bold;
+}
+.feedBack{
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+    white-space: break-word;
+}
+
+
+.home button{
+    border: none;
+    background: none;
+    font-size: 4.5vh;
+    color: #173092;
+    position: absolute;
+    top: 25%;
+    right: 2%;
+}
+
+.home button:hover{
+    color: #0b1d66;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PREGUNTAS  */
+
+.titleformul{
+    margin: 5% 2% 2% 2%;
+    font-size: 3vh;
+}
+
+.questionFrom{
+    margin: 0% 2% 2% 2%;
+}
+
+.request{
+    margin: 0% 2% 5% 2%;
+    border: 1px transparent solid;
+    border-radius: 10px;
+}
+.request select{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    background: #E6E3F0;
+}
+
+
+
+
+.formularioQuestion{
+    background: white;
+    height: auto;
+    width: 70%;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    white-space: break-word;
+}
+
+
+.linearBlue{
+    border-left: 10px #5d45aa solid;
+
+}
+
+/* PREGUNTAS  */
+
