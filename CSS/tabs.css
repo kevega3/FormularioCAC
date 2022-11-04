@@ -1,0 +1,44 @@
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+
+    
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    float: left;
+    border: none;
+    margin: 0px 10px;
+    cursor: pointer;
+    padding: 10px 10px 9px 10px;
+    background: transparent;
+    font-size: 17px;
+    transition: .3s;
+    color: white;
+  }
+  
+  /* Change background color of buttons on hover */
+
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    border-bottom: 6px solid white;
+    background: transparent;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+  }
+  .circulo{
+    padding: 5px 10px;
+    border-radius: 100%;
+    font-size: 14px;
+    background: #c2c2c2c2;
+  }

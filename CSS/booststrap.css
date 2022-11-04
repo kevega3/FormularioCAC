@@ -636,6 +636,7 @@ progress {
     width: 100%;
     padding-right: var(--bs-gutter-x, .0rem);
     padding-left: var(--bs-gutter-x, .0rem);
+    position: relative;
 }
 
 .container,

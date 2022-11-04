@@ -54,6 +54,10 @@
     top: 20%;
     bottom: 20%;
     left: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .paralelogramo p{
@@ -74,6 +78,7 @@
 }
 .Nomnbre{
     font-size: 6vh;
+    font-style: italic;
 }
 
 
@@ -166,7 +171,14 @@ white-space: break-word;
     padding: 10px;
     background: #E6E3F0;
 }
-
+.request input{
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    background: #E6E3F0;
+}
 
 
 

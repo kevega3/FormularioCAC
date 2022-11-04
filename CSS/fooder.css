@@ -1,0 +1,16 @@
+.fooder{
+    background: white;
+    height: 80px; 
+    position: relative;
+    bottom:-10;
+    margin-top: 25px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fooder p{
+    padding-top:18px ;
+}
