@@ -1,3 +1,10 @@
+<?php 
+error_reporting(0);
+session_start();
+session_destroy();
+$error=$_GET['error'];
+include ('Modelo/Key.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +27,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap"
         rel="stylesheet">
 
+    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"></script>
+
     <!--Css propios -->
     <!-- Recatch -->
 
@@ -33,6 +42,17 @@
 
     <div class="ContenedorGe">
         <div class="contenedorLogin">
+        <?php if(empty($error)){
+	
+}else{
+?>
+<div class="alert alert-danger alert-dismissible fade show">
+    <strong> Datos incorrectos, verifique su usuario y contraseña
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+<?php
+}
+	?>
 
             <div class="row">
                 <div class="col-1"></div>
@@ -129,4 +149,33 @@
     }
   
 </script>
+
+
+
+    <script type="text/Javascript">
+        grecaptcha.ready(function(){
+
+    grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'}).then(function(token) {
+        document.getElementById("entrar").value = token;
+        });
+    });
+    </script>
+
+    <script>
+    function getReCaptcha() {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('<?php echo SITE_KEY;?>', {
+                action: 'homepage'
+            }).then(function(token) {
+                document.getElementById("entrar").value = token;
+            });
+        });
+    }
+
+    getReCaptcha();
+    setInterval(function() {
+        getReCaptcha();
+    }, 110000);
+    </script>
+
 </html>
