@@ -122,7 +122,13 @@ white-space: break-word;
     color: #173092;
     position: absolute;
     top: 25%;
+}
+.iconhome{
     right: 2%;
+}
+
+.icontools{
+    right: 6%;
 }
 
 .home button:hover{
@@ -202,4 +208,16 @@ white-space: break-word;
 }
 
 /* PREGUNTAS  */
+
+
+.tabcontent {
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+  }
+  
+
 

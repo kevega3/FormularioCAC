@@ -11,8 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/booststrap.css">
     <link rel="stylesheet" href="../CSS/Formulario.css">
-    <link rel="stylesheet" href="../CSS/tabs.css">
     <link rel="stylesheet" href="../CSS/fooder.css">
+    <link rel="stylesheet" href="../CSS/btnlogin.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <title>Bienvenido</title>
     <link rel="icon" href="../IMG/simbolo_cac_color.png" type="image/x-icon" />
     <!-- letras   -->
@@ -29,6 +30,34 @@
 
 
     <div class="container-fluid ">
+
+        <div class="login-modal-overlay">
+
+            <div class="login-modal">
+                <h1><b> Iniciar Sesion</b> </h1>
+                <h2>Para continuar, porfavor ingrese sus credenciales de acceso</h2>
+                <form action="../Modelo/ValidadAdmin.php" method="POST" >
+                    <div class="group">
+                        <input type="text" required name="user"></span><span class="bar"></span>
+                        <label>Usuario</label>
+                    </div>
+                    <div class="group">
+                        <input type="password" required name="pass"></span><span class="bar"></span>
+                        <label>Contraseña</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar
+                        <div class="ripples buttonRipples">
+                            <span class="ripplesCircle"></span>
+                        </div>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+
+
+
         <div class="headerform">
             <div class="containerImgIcono">
                 <img src="../IMG/simbolo_cac_color.png" class="iconoCAC" alt="" width="60px">
@@ -36,9 +65,20 @@
             </div>
 
             <div class="home">
-                <button onclick="CerrarSesion()">
+                <button onclick="CerrarSesion()" class="iconhome ">
                     <i class="fas fa-home"></i>
                 </button>
+
+             
+                    <button type="text" class="openb icontools"><i class="fas fa-tools"></i>
+                        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                    </button>
+              
+
+
+
+
+
             </div>
         </div>
 
@@ -47,13 +87,13 @@
 
 
 
-      
 
-        
+
+
         <div class="ContenedorFormulario">
 
-            
-        <?php include('TodosTaps.php')?>
+
+            <?php //include('TodosTaps.php')?>
 
 
             <!-- <div class="contenedorGrd"> -->
@@ -87,19 +127,19 @@
                 </div>
             </div>
 
-            
 
-            <?php include ('Tabs/taps_Alacenamiento.php') ?>
-            <?php include ('Tabs/taps_Calidad.php') ?>
-            <?php include ('Tabs/taps_ArquitecturaEmpresarial.php') ?>
-            
 
-            
+
+            <?php include ('Tabs/Preguntas.php') ?>
 
 
 
 
-           
+
+
+
+
+
             <!-- </div> -->
 
 
@@ -115,13 +155,13 @@
 
 
         <!-- fooder -->
-    <footer>
-        <div class="fooder">
-            <p>
-            © 2022 Todos los derechos reservados a Cuenta de Alto Costo
-            </p>
-        </div>
-    </footer>
+        <footer>
+            <div class="fooder">
+                <p>
+                    © 2022 Todos los derechos reservados a Cuenta de Alto Costo
+                </p>
+            </div>
+        </footer>
 
         <!-- fooder -->
 
@@ -130,12 +170,15 @@
 
 
 
+
+
     <script src="https://kit.fontawesome.com/c4cc899971.js" crossorigin="anonymous"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="../JS/Alert.js"></script>
-    <script src="../JS/tabs.js"></script>
+
+    <script src="../JS/login.js"></script>
 </body>
 
 </html>
