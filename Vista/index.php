@@ -47,8 +47,14 @@
 
 
 
+      
 
+        
         <div class="ContenedorFormulario">
+
+            
+        <?php include('TodosTaps.php')?>
+
 
             <!-- <div class="contenedorGrd"> -->
             <div class="formularioHeader row">
@@ -62,19 +68,6 @@
                         <span class="Nomnbre">CUENTA DE ALTO COSTO</span>
                     </div>
                 </div>
-                <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'Almacenamiento')">Almacenamiento
-                        <buttom class="circulo">2</buttom>
-                    </button>
-                    <button class="tablinks" onclick="openCity(event, 'Almacenamiento y operaciones')">Almacenamiento y operaciones 
-                        <buttom class="circulo">10</buttom>
-                    </button>
-                    <button class="tablinks" onclick="openCity(event, 'Arquitectura Empresarial')">Arquitectura Empresarial
-                        <buttom class="circulo">2</buttom>
-                    </button>
-
-                </div>
-
             </div>
 
             <div class="formularioFeedBack row ">
@@ -97,6 +90,7 @@
             
 
             <?php include ('Tabs/taps_Alacenamiento.php') ?>
+            <?php include ('Tabs/taps_Calidad.php') ?>
 
             
 

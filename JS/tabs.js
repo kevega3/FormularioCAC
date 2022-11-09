@@ -14,5 +14,5 @@ function openCity(evt, cityName) {
 
 
   window.onload = function() {
-    openCity(event, 'Almacenamiento').click();
+    openCity(event, 'Calidad').click();
  }

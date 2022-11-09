@@ -18,25 +18,22 @@ if ($_POST['entrar']) {
 
 
 
-    $query= "SELECT * FROM Personas   WHERE token =  '$codigo' ";
-    $consulta=$cnx->prepare($query);
-    $consulta->execute();
-$filaModel=$consulta->fetch();
-    if($filaModel>0){
-        $res=sqlsrv_query($conn,$query);
-        while ($fila=sqlsrv_fetch_array($res)) {
-            $IdUser=$fila['id']; 
+    $query= "SELECT * FROM Persona   WHERE token =  '$codigo' ";
+    $res= mysqli_query($conn,$query);
+    if(!$res || mysqli_num_rows($res)==0){
+        
+            header("location:../index.php?error=".base64_encode('E')); 
+            die();    
+    }
+    else{
+        while ($fila= mysqli_fetch_array($res)) {
+            $IdUser=$fila['idPersona']; 
             $nombre1 = $fila['nombre1'];
         }
         session_start();
         $_SESSION['usuario']=  $nombre1;
-        $_SESSION['id']=$IdUser;
+        $_SESSION['idPersona']=$IdUser;
          header("Location: ../Vista/");
-    }
-    else{
-        // echo "<script>alert('El usuario no Existe')</script>";
-        // echo "<script>window.location.replace('../index.php')</script>";
-        header("location:../index.php?error=".base64_encode('E')); 
     }
 
 }else{
