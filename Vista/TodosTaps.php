@@ -1,6 +1,6 @@
 <div class="tab">
     <?php 
-        if(str_contains($AreasCono, '1')){
+        //if(str_contains($AreasCono, '1')){
             
     ?>
 
@@ -9,55 +9,55 @@
     </button>
 
     <?php 
-        }if(str_contains($AreasCono, '2')){
+        //}if(str_contains($AreasCono, '2')){
     ?>
     <button class="tablinks" onclick="openCity(event, 'Arquitectura Empresarial')">Arquitectura Empresarial
         <buttom class="circulo">2</buttom>
     </button>
     <?php 
-        }if(str_contains($AreasCono, '3')){
+        //}if(str_contains($AreasCono, '3')){
     ?>
     <button class="tablinks" onclick="openCity(event, 'Arquitectura de datos')">Arquitectura de datos
         <buttom class="circulo">2</buttom>
     </button>
     <?php 
-    }if(str_contains($AreasCono, '4')){
+    //}if(str_contains($AreasCono, '4')){
     ?>
     <button class="tablinks" onclick="openCity(event, 'Calidad')">Calidad
         <buttom class="circulo">3</buttom>
     </button>
     <?php 
-    }if(str_contains($AreasCono, '5')){
+    //}if(str_contains($AreasCono, '5')){
     ?>
     <button class="tablinks" onclick="openCity(event, 'Ciberseguridad')">Ciberseguridad
         <buttom class="circulo">2</buttom>
     </button>
     <?php 
-    }if(str_contains($AreasCono, '6')){
+    //}if(str_contains($AreasCono, '6')){
     ?>
     <button class="tablinks" onclick="openCity(event, 'Estrategia de datos')">Estrategia de datos
         <buttom class="circulo">2</buttom>
     </button>
     <?php 
-    }if(str_contains($AreasCono, '7')){
+    //}if(str_contains($AreasCono, '7')){
     ?>
     <button class="tablinks" onclick="openCity(event, 'Gestión de datos maestros')">Gestión de datos maestros
         <buttom class="circulo">2</buttom>
     </button>
     <?php 
-    }if(str_contains($AreasCono, '8')){
+    //}if(str_contains($AreasCono, '8')){
     ?>
     <button class="tablinks" onclick="openCity(event, 'Gobierno')">Gobierno
         <buttom class="circulo">2</buttom>
     </button>
     <?php 
-    }if(str_contains($AreasCono, '9')){
+    //}if(str_contains($AreasCono, '9')){
     ?>
     <button class="tablinks" onclick="openCity(event, 'Mejora de Productividad')">Mejora de Productividad
         <buttom class="circulo">2</buttom>
     </button>
     
-    <?php }?>
+    <?php //}?>
 
 </div>
 

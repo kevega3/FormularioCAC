@@ -91,6 +91,8 @@
 
             <?php include ('Tabs/taps_Alacenamiento.php') ?>
             <?php include ('Tabs/taps_Calidad.php') ?>
+            <?php include ('Tabs/taps_ArquitecturaEmpresarial.php') ?>
+            
 
             
 

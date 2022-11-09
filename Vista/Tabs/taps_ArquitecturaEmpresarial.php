@@ -1,6 +1,5 @@
 
-
-<div id="Almacenamiento" class="tabcontent">
+<div id="Arquitectura Empresarial" class="tabcontent">
 <?php 
     $TraerCalida = "SELECT * FROM `preguntas` WHERE idAreaCon = 1 and TipoRespuesta ='SelectAlmacenamiento'";
     $res =  mysqli_query($conn,$TraerCalida);

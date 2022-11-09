@@ -14,7 +14,7 @@ if ($varsesion == null || ($varsesion = '' || mysqli_num_rows($res)==0)) {
     $varQuery2 = "select persona.*,roles.* from persona,roles where persona.idRol = roles.idRol";
     $res =  mysqli_query($conn,$varQuery2);
     while ($fila=mysqli_fetch_array($res)) {
-        $Rol=$fila['idRol']; 
+        $RolPersona=$fila['idRol']; 
         $AreasCono = $fila['AreasCono']; 
     }
     
