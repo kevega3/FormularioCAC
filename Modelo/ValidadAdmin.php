@@ -18,12 +18,12 @@ if(!$res || mysqli_num_rows($res)==0){
 }
 else{
     while ($fila= mysqli_fetch_array($res)) {
-        $IdUser=$fila['idPersona']; 
-        $nombre1 = $fila['nombre1'];
+        $IdUser=$fila['idAdmin']; 
+        $nombreAdmin = $fila['usuario'];
     }
     session_start();
-    $_SESSION['usuario']=  $nombre1;
-    $_SESSION['idPersona']=$IdUser;
+    $_SESSION['usuario_Admin']=  $nombreAdmin;
+    $_SESSION['idAdmin']=$IdUser;
      header("Location: ../Vista/Admin/");
 }
 

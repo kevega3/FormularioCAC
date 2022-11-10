@@ -4,7 +4,7 @@ const inputs = document.querySelectorAll("#formulario input");
 const expresiones = {
 	
 	// nombre: /^[a-zA-ZÀ-ÿ\s],[0-9]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	codigo: /^[a-z,A-Z, 0-9 o _ * % $ # / () & = !]{2,10}$/, // 7 a 14 numeros.
+	codigo: /^[a-z,A-Z, 0-9 o _ * % $ # / () & = !]{2,40}$/, // 7 a 14 numeros.
 };
 
 const campos = {

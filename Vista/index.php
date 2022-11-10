@@ -13,7 +13,13 @@
     <link rel="stylesheet" href="../CSS/Formulario.css">
     <link rel="stylesheet" href="../CSS/fooder.css">
     <link rel="stylesheet" href="../CSS/btnlogin.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
     <title>Bienvenido</title>
     <link rel="icon" href="../IMG/simbolo_cac_color.png" type="image/x-icon" />
     <!-- letras   -->
@@ -24,7 +30,7 @@
     <!-- letras -->
 </head>
 
-<body style="font-family: 'Montserrat', sans-serif;font-weight: bold;background: #e6e3f0">
+<body style="font-family: 'Montserrat', sans-serif;font-weight: bold;">
     </style>
 
 
@@ -145,7 +151,16 @@
 
 
 
-
+            <!-- <select data-placeholder="Begin typing a name to filter..." multiple class="chosen-select" name="interes[]">
+                <option >American Black Bear</option>
+                <option>Asiatic Black Bear</option>
+                <option>Brown Bear</option>
+                <option>Giant Panda</option>
+                <option>Sloth Bear</option>
+                <option>Sun Bear</option>
+                <option>Polar Bear</option>
+                <option>Spectacled Bear</option>
+            </select> -->
 
 
 
@@ -168,7 +183,11 @@
         <!-- container-fluid -->
     </div>
 
-
+    <script>
+     $(".chosen-select").chosen({
+        no_results_text: "Oops, nothing found!"
+      })
+</script>
 
 
 
@@ -178,7 +197,7 @@
 
     <script src="../JS/Alert.js"></script>
 
-    <script src="../JS/login.js"></script>
+    <script src="../JS/login.js"></script> 
 </body>
 
 </html>

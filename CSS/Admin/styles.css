@@ -1,0 +1,12 @@
+.tituloConsultasToken{
+    display: inline-flex;
+    padding: 25px;
+}
+.tituloConsultasToken h1{
+    padding-left: 25px;
+}
+
+.Container-Tables{
+    padding: 20px;
+    
+}

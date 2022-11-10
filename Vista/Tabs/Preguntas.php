@@ -1,14 +1,14 @@
 <div id="Calidad" class="tabcontent">
-    <?php 
-    $TraerPreguntas = "SELECT * FROM areaconocimiento INNER JOIN preguntas ON areaconocimiento.idAreaConocimiento = preguntas.idAreaCon ";
+
+    <?php
+    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento'; 
     $res =  mysqli_query($conn,$TraerPreguntas);
     $contador = 0;
-    
     while ($fila=mysqli_fetch_array($res)) { 
         $Rol = $fila['Rol'];
         $separador = ",";
         $TipoRespuesta = $fila['TipoRespuesta'];
-        $DescipcionAreaCon = $fila['Descripcion'];
+        $Descripcion = $fila['Descripcion'];
         $separada = explode($separador, $Rol);
         
         if(in_array($RolPersona, $separada)){
@@ -16,24 +16,35 @@
         ?>
     <div class="formularioQuestion linearBlue row">
         <div class="col-12">
-            <div class="titleformul">Pregunta <?php echo $contador. "  - " . $DescipcionAreaCon ?></div>
+            <div class="titleformul">Pregunta <?php echo $contador.". -  ".$Descripcion?></div>
             <div class="questionFrom"><?php echo $fila['pregunta']; ?></div>
             <div class="request">
+                <?php 
+                    $TraerRespuestas= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
+                    $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
+                        while ($filaBuscaTipoInput=mysqli_fetch_array($ResRespuestas)){
+                            $ValTipoPregunta =  $filaBuscaTipoInput['ValTipoPregunta'];    
+                        }
+                        if($ValTipoPregunta == 'Select'){
+                        ?>
                 <select class="select" name="Pregunta1" id="Pregunta1" required>
                     <option disabled selected value="">Seleccionar</option>
-                    <?php
-                        $NuPregunta = $fila['idPregunta'];
-                        
-                        $sqlPregunta1 = "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
+                    <?php    
+                        }elseif($ValTipoPregunta == 'MultiSelect'){
+                        ?>
+                    <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select"
+                        name="Rol[]">
+                        <option disabled selected value="" required>¿Aquien se le va a preguntar?</option>
 
-                        $Pregunta1res =  mysqli_query($conn,$sqlPregunta1);
-                        while ($filaPre1=mysqli_fetch_array($Pregunta1res)){
-                    ?>
-                    <option value="<?php echo $filaPre1['Respuesta'] ?>">
-                        <?php echo $filaPre1['Respuesta']; }?></option>
+                        <?php    
+                        }
+                        while ($filaBuscaTipoInput=mysqli_fetch_array($ResRespuestas)){
+                        ?>
+                        <option value="<?php echo $filaBuscaTipoInput['Respuesta']; ?>">
+                            <?php echo $filaBuscaTipoInput['Respuesta']; }?></option>
 
-                    <input type="text" class="AbiertaCalidad" name="Justifique su respuesta"
-                        placeholder="Justifique su respuesta">
+
+                    </select>
             </div>
         </div>
     </div>
@@ -44,4 +55,13 @@
     }
     
 ?>
+
+    <!-- <?php 
+ $ResRespuestas = mysqli_query($conn,$TraerRespuestas);
+ while ($filaBuscaTipoInput=mysqli_fetch_array($ResRespuestas)){
+?>
+
+    <option value="<?php echo $filaBuscaTipoInput['Respuesta']; ?>">
+        <?php echo $filaBuscaTipoInput['Respuesta']; }?></option> -->
+
 </div>
