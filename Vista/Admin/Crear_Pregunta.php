@@ -15,18 +15,18 @@
     <br>
     <br>
 
-    <select name="consultora" >
+    <!-- <select name="consultora" >
         <option disabled selected value="">Consultora</option>
         <option value="Tinysoft">Tinysoft</option>
         <option value="CAC">CAC</option>
-    </select>
+    </select> -->
 
 
 
 <br>
 <br>
 
-    <select name="idAreaCon">
+    <!-- <select name="idAreaCon">
         <option disabled selected value="">Consultora</option>
         <option value="1">Almacenamiento</option>
         <option value="2">Arquitecrura empresarial</option>
@@ -41,21 +41,21 @@
         <option value="11">Gestión documental y de contenidos</option>
         <option value="12">Integracion e interoperabilidad</option>
         <option value="13">Modelos de transformacion digital</option>
-    </select>
+    </select> -->
     <br>
     <br>
 
 
 
 
-    <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select" name="Rol[]">
+    <!-- <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select" name="Rol[]">
     <option disabled selected value="" required>¿Aquien se le va a preguntar?</option>
         <option value="1">Líderes negocio</option>
         <option value="2">Usuarios negocio</option>
         <option value="3">Líderes Tecnología</option>
         <option value="4">Equipo tecnología</option>
         <option value="5">Equipo Seguridad y privacidad</option>
-    </select> 
+    </select>  -->
 
 
 

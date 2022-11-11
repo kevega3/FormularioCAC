@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="../CSS/Formulario.css">
     <link rel="stylesheet" href="../CSS/fooder.css">
     <link rel="stylesheet" href="../CSS/btnlogin.css">
+    <link rel="stylesheet" href="../CSS/Reload_Esperar.css">
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
     <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
-
     <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
     <title>Bienvenido</title>
     <link rel="icon" href="../IMG/simbolo_cac_color.png" type="image/x-icon" />
@@ -34,8 +34,22 @@
     </style>
 
 
+    <div class="loader ">
+        <div class="ContenedorEsperar">
+            <center>
+                <p class="Esperar">Espera un momento porfavor ...</p>
+            </center>
+        </div>
+        <div id="carga">
+        </div>
+    </div>
+
 
     <div class="container-fluid ">
+
+        <button class="btnEnviar" id="Import" onclick="ValidValues()">
+            <i class="fas fa-arrow-right"></i>
+        </button>
 
         <div class="login-modal-overlay">
 
@@ -163,7 +177,7 @@
             </select> -->
 
 
-
+            <p id="DOM" class="containerDom"></p>
 
         </div>
 

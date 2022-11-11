@@ -15,35 +15,33 @@
             $contador++;
         ?>
     <div class="formularioQuestion linearBlue row">
-        <div class="col-12">
-            <div class="titleformul">Pregunta <?php echo $contador.". -  ".$Descripcion?></div>
+        <div class="col">
+            <div class="titleformul">Pregunta <?php echo $contador." -  ".$Descripcion?>.</div>
             <div class="questionFrom"><?php echo $fila['pregunta']; ?></div>
             <div class="request">
                 <?php 
-                    $TraerRespuestas= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
-                    $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
-                        while ($filaBuscaTipoInput=mysqli_fetch_array($ResRespuestas)){
-                            $ValTipoPregunta =  $filaBuscaTipoInput['ValTipoPregunta'];    
+                    $TraerSelect= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
+                    $ResSelect=  mysqli_query($conn,$TraerSelect);
+                        while ($filaBuscaSelect=mysqli_fetch_array($ResSelect)){
+                            $ValTipoPregunta =  $filaBuscaSelect['ValTipoPregunta'];    
                         }
                         if($ValTipoPregunta == 'Select'){
                         ?>
-                <select class="select" name="Pregunta1" id="Pregunta1" required>
+                    <select class="validar" name="<?php echo $contador?>" id="<?php echo $contador?>" required >
                     <option disabled selected value="">Seleccionar</option>
                     <?php    
                         }elseif($ValTipoPregunta == 'MultiSelect'){
                         ?>
-                    <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select"
-                        name="Rol[]">
-                        <option disabled selected value="" required>¿Aquien se le va a preguntar?</option>
-
+                    <select data-placeholder="Seleccione uno o varios" multiple  class="chosen-select" name="Rol[]" class="validar" id="<?php echo $contador ?>">
+                        <option disabled selected value="" required>Seleccione uno o varios</option>
                         <?php    
                         }
-                        while ($filaBuscaTipoInput=mysqli_fetch_array($ResRespuestas)){
+                        $TraerRespuestas= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
+                        $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
+                        while ($filaBuscaRespuestas=mysqli_fetch_array($ResRespuestas)){
                         ?>
-                        <option value="<?php echo $filaBuscaTipoInput['Respuesta']; ?>">
-                            <?php echo $filaBuscaTipoInput['Respuesta']; }?></option>
-
-
+                        <option value="<?php echo $filaBuscaRespuestas['Respuesta']; ?>">
+                            <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
                     </select>
             </div>
         </div>

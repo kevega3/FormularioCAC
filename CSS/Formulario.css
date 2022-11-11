@@ -32,7 +32,8 @@
 .formularioHeader{
     background: #5d45aa;
     height: 210px;
-    width: 70%;
+    width: 64%;
+
     margin: 40px 0px 10px;
     border-radius: 10px;
     position: relative;
@@ -86,7 +87,7 @@
 .formularioFeedBack{
     background: white;
     height: 210px;
-    width: 70%;
+    width: 64%;
     margin: 10px;
     border-radius: 10px;
     position: relative;
@@ -191,7 +192,7 @@ white-space: break-word;
 .formularioQuestion{
     background: white;
     height: auto;
-    width: 70%;
+    width: 64%;
     margin: 10px;
     border-radius: 10px;
     position: relative;
@@ -218,6 +219,49 @@ white-space: break-word;
     padding: 0;
     bottom: 0;
   }
-  
+  .chosen-container-multi .chosen-choices {
+    background: #E6E3F0;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
 
 
+
+  .btnEnviar {
+    position: fixed;
+    right: 8vh;
+    bottom: 3vh;
+    padding: 22px 27px;
+    background: #5d45aa;
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 60%;
+    z-index: 100;
+}
+
+
+.textoValidador{
+    color: red;
+    position: fixed;
+    right: 2vh;
+    bottom: 20vh;
+    font-size: 14px;
+    z-index: 100;
+}
+
+.containerDom{
+    /* background: black; */
+    /* height: 10px; */
+    /* width: 10px; */
+    position: fixed;
+    right: 1vh;
+    top: 0vh;
+    z-index: 100;
+
+}
+
+.containerDom p{
+    color: red;
+}

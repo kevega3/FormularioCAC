@@ -25,3 +25,37 @@ function CerrarSesion(){
 }
 
 
+
+
+function ValidValues(){
+    var arr = $(".validar");
+    var control = true;
+    if (arr.length > 0) {
+        for (i = 0; i < arr.length; i++) {
+                if (arr[i].value === '' || arr[i].value === null) {
+                  const lineBreak = document.createElement('p');
+                  lineBreak.innerHTML = "La pregunta No esta contestada"+ i;
+                  textContent = document.getElementById("DOM");
+                  textContent.appendChild(lineBreak);
+                  textContent.classList.add("replay");
+
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Debes llenar todo el formulario',
+                    text: 'No podemos seguir si no llenas todos los campos',
+                  })
+                    control = false;
+                    break;
+                }
+                if(control){
+                  for(j = 0; j < arr.length; j++){
+                    var j = $("#".j).val();
+                  }
+                  let loader = document.querySelector(".loader");
+                  loader.classList.add("active");
+                }
+        }
+        
+    }
+
+}
