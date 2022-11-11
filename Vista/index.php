@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../CSS/fooder.css">
     <link rel="stylesheet" href="../CSS/btnlogin.css">
     <link rel="stylesheet" href="../CSS/Reload_Esperar.css">
+    <link rel="stylesheet" href="../CSS/Reload.css">
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -33,6 +34,10 @@
 <body style="font-family: 'Montserrat', sans-serif;font-weight: bold;">
     </style>
 
+
+    <div class="" id="contenedor_carga">
+        <div id="carga"></div>
+</div>
 
     <div class="loader ">
         <div class="ContenedorEsperar">
@@ -54,8 +59,7 @@
         <div class="login-modal-overlay">
 
             <div class="login-modal">
-                <h1><b> Iniciar Sesion</b> </h1>
-                <h2>Para continuar, porfavor ingrese sus credenciales de acceso</h2>
+                <h1><b> BIENVENIDO</b> </h1>
                 <form action="../Modelo/ValidadAdmin.php" method="POST" >
                     <div class="group">
                         <input type="text" required name="user"></span><span class="bar"></span>
@@ -65,7 +69,7 @@
                         <input type="password" required name="pass"></span><span class="bar"></span>
                         <label>Contraseña</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Entrar
+                    <button type="submit" class="btnEntrarLog">Entrar
                         <div class="ripples buttonRipples">
                             <span class="ripplesCircle"></span>
                         </div>
@@ -201,6 +205,15 @@
      $(".chosen-select").chosen({
         no_results_text: "Oops, nothing found!"
       })
+</script>
+<script>
+ 
+    window.onload = function() {
+        var contenedor = document.getElementById('contenedor_carga');
+        contenedor.style.visibility = 'hidden';
+        contenedor.style.opacity = '0';
+    }
+  
 </script>
 
 

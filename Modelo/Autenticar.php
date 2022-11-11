@@ -2,6 +2,7 @@
 <?php 
 include('Conexion.php');
 session_start();
+
 $varsesion = $_SESSION['usuario'];
 $id = $_SESSION['idPersona'];
 $varQuery = "SELECT * FROM Persona   WHERE idPersona =  '$id'";
@@ -32,8 +33,6 @@ if ($varsesion == null || ($varsesion = '' || mysqli_num_rows($res)==0)) {
     // }
     // $_SESSION["timeout"] = time(); 
 }
-
-    
 
 
 ?>     

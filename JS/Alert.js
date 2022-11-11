@@ -33,11 +33,11 @@ function ValidValues(){
     if (arr.length > 0) {
         for (i = 0; i < arr.length; i++) {
                 if (arr[i].value === '' || arr[i].value === null) {
-                  const lineBreak = document.createElement('p');
-                  lineBreak.innerHTML = "La pregunta No esta contestada"+ i;
-                  textContent = document.getElementById("DOM");
-                  textContent.appendChild(lineBreak);
-                  textContent.classList.add("replay");
+                  // const lineBreak = document.createElement('p');
+                  // lineBreak.innerHTML = "La pregunta No esta contestada"+ i;
+                  // textContent = document.getElementById("DOM");
+                  // textContent.appendChild(lineBreak);
+                  // textContent.classList.add("replay");
 
                   Swal.fire({
                     icon: 'error',
@@ -57,5 +57,4 @@ function ValidValues(){
         }
         
     }
-
 }

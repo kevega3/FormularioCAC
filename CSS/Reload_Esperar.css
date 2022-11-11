@@ -25,12 +25,12 @@
     font-size: 15px;
 }
 #carga{
-    border: 3px solid #ffffff;
-    border-top-color: #97979700;
+    border: 9px solid #6C6867;
+    border-top-color: #FFFF;
     border-top-style: ridge;
-    height: 50px;
-    width: 50px;
-    border-radius:100%;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
     position: absolute;
     top: 0;
     left: 0;

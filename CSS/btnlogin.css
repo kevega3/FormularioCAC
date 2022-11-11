@@ -24,7 +24,7 @@
 /* modal */
 
 .login-modal {
-  background: #fff;
+  background: #FFF;
   max-width: 480px;
   width: 100%;
   height: 390px;
@@ -34,9 +34,9 @@
   right: 0;
   left: 0;
   margin: auto;
-  -webkit-box-shadow: 0 -2px 25px 0 rgba(0, 0, 0, 0.15), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
-  padding: 30px;
+  -webkit-box-shadow: 0 -2px 25px 0 rgb(0 0 0 / 15%), 0 13px 25px 0 rgb(0 0 0 / 30%);
+  border-radius: 15px;
+  padding: 110px 30px 30px 30px;
 }
 
 
@@ -44,12 +44,16 @@
 
 .login-modal h1 {
   padding-top: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #333;
-  padding-bottom: 10px;
+    margin: 0;
+    font-size: 30px;
+    color: #0b62a5;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 47px;
+    font-weight: bold;
+    left: 18vh;
 }
-
+/* 
 .login-modal h2 {
   font-size: 15px;
   font-weight: 400;
@@ -59,7 +63,7 @@
   font-kerning: normal;
   hyphens: auto;
   padding-bottom: 30px;
-}
+} */
 
 
 /* form & imputs */
@@ -200,4 +204,14 @@
     padding-bottom: 200%;
     opacity: 0;
   }
+}
+
+.btnEntrarLog{
+  padding: 15px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    background: #0b62a5;
+    color: white;
 }
