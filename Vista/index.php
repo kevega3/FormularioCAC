@@ -53,7 +53,7 @@
     <div class="container-fluid ">
 
         <button class="btnEnviar" id="Import" onclick="ValidValues()">
-            <i class="fas fa-arrow-right"></i>
+        <i class="fas fa-paper-plane"></i>
         </button>
 
         <div class="login-modal-overlay">
@@ -85,7 +85,8 @@
         <div class="headerform">
             <div class="containerImgIcono">
                 <img src="../IMG/simbolo_cac_color.png" class="iconoCAC" alt="" width="60px">
-                <h3>Formulario xxxxxx</h3>
+                
+                <h5>ESTUDIO DE MADUREZ EN GOBIERNO Y GESTIÓN DEL DATO</h5>
             </div>
 
             <div class="home">
@@ -138,16 +139,18 @@
                 <div class="linear"></div>
 
                 <div class="feedBack">
-                    <h2><b> FEEDBACK</b> </h2>
+                    <h3><b>INTRODUCCIÓN</b> </h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi enim ostrum illo, a harum
-                        rerum,
-                        suscipit repellendus placeat omnis minima molestias
-                        id? Illo quo in eos officiis ullam sit ea? Lorem ipsum dolor sit amet consectetur
-                        adipisicing
-                        elit. Quidem, fuga repella
-                        t deserunt atque
+                    Bienvenidos al ejercicio de valoración general de madurez en gestión y gobierno de datos en las entidades del sector salud, la participación de su entidad es fundamental.
                     </p>
+                    <span>
+                    Complete el cuestionario con exito:
+                    </span>
+                    <li>Conteste todas las preguntas.</li>
+                    <li>Justifique sus repuestas, cada pregunta tiene un apartado de campo abierto para que explique al detalle su respuesta.</li>
+                    <li>Cuando haya contestado cada una de las preguntas puede terminar su cuestionario dandole click al boton enviar.</li>
+                    </p>
+                    
                 </div>
             </div>
 
@@ -179,9 +182,6 @@
                 <option>Polar Bear</option>
                 <option>Spectacled Bear</option>
             </select> -->
-
-
-            <p id="DOM" class="containerDom"></p>
 
         </div>
 

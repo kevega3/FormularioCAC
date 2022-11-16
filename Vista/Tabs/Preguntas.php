@@ -27,21 +27,38 @@
                         }
                         if($ValTipoPregunta == 'Select'){
                         ?>
-                    <select class="validar" name="<?php echo $contador?>" id="<?php echo $contador?>" required >
+                <select class="validar" name="<?php echo $contador?>" id="<?php echo $contador?>" required>
                     <option disabled selected value="">Seleccionar</option>
                     <?php    
                         }elseif($ValTipoPregunta == 'MultiSelect'){
                         ?>
-                    <select data-placeholder="Seleccione uno o varios" multiple  class="chosen-select" name="Rol[]" class="validar" id="<?php echo $contador ?>">
+                    <select data-placeholder="Seleccione uno o varios" multiple class="chosen-select" name="Rol[]"
+                        class="validar" id="<?php echo $contador ?>">
                         <option disabled selected value="" required>Seleccione uno o varios</option>
                         <?php    
                         }
                         $TraerRespuestas= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                         $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
+                        if($ValTipoPregunta == 'Abierta'){
+                        ?>
+                        <input type="text" placeholder="Si/No Justifique su respuesta">
+                        <?php  
+                        }elseif($ValTipoPregunta == 'Numerico'){
+                        ?>
+                        <input type="number" placeholder="Solo puede agregar numeros">
+                        <?php 
+                        }else{
                         while ($filaBuscaRespuestas=mysqli_fetch_array($ResRespuestas)){
+                            
                         ?>
                         <option value="<?php echo $filaBuscaRespuestas['Respuesta']; ?>">
                             <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
+
+                        <input type="text" placeholder="Justifique su respuesta">
+                        <?php 
+                        }
+                        ?>
+
                     </select>
             </div>
         </div>
@@ -53,13 +70,4 @@
     }
     
 ?>
-
-    <!-- <?php 
- $ResRespuestas = mysqli_query($conn,$TraerRespuestas);
- while ($filaBuscaTipoInput=mysqli_fetch_array($ResRespuestas)){
-?>
-
-    <option value="<?php echo $filaBuscaTipoInput['Respuesta']; ?>">
-        <?php echo $filaBuscaTipoInput['Respuesta']; }?></option> -->
-
 </div>

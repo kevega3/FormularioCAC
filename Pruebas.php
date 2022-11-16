@@ -97,7 +97,7 @@
 
       <div class='mensaje'>
         <div class='titulo'>
-          <h3>Solicitud de Usuario SISCAC  <span>Habilitado</span></h3> 
+          <h3>Estuidio de madurez,codigo <span>Habilitado</span></h3> 
         </div>
         <br>
         
@@ -105,14 +105,14 @@
      
       </br>
       <div class='texto'>
-        <p>Ingrese a la siguiente pagina con el siguiente codigo  <strong>{$Token}</strong> para gestionar su solicitud de usuario <b>SISCAC</b>
-           <span><b>Este codigo no lo debe compartir con ninguna persona o entidad.</b></span> 
-        </p> 
+        <p>
+        De conformidad con estudio de madurez en gobierno y gestión de dato y teniendo en cuenta la importancia que requiere diligenciar el formulario nos permitimos compartir el siguiente codigo <strong>{$Token}</strong> Recuerde que <span><b>este codigo no debe ser compartido con ninguna persona o entidad</span></b>
+        </p>
       </div>
         
         </br>
         <center>
-          <a class='boton' href='http://localhost/UsuariosSISCAC/' target='_blank'>Generar solicitud</a>
+          <a class='boton' href='http://localhost/UsuariosSISCAC/' target='_blank'>Ir al cuestionario</a>
         </center>
       </div>
       <div class='footer'>
@@ -121,4 +121,4 @@
     </div>
   </div>
 </body>
-</html>
+</html>                       

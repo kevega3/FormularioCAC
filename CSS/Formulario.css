@@ -15,8 +15,8 @@
     padding: 20px;
     display: -webkit-box;
 }
-.containerImgIcono h3{
-    margin: 10px 10px 10px 30px;
+.containerImgIcono h5{
+    padding: inherit;
 }
 .ContenedorFormulario{
     background: #e6e3f0;
@@ -86,7 +86,7 @@
 
 .formularioFeedBack{
     background: white;
-    height: 210px;
+    height: auto;
     width: 64%;
     margin: 10px;
     border-radius: 10px;
@@ -105,7 +105,8 @@ white-space: break-word;
 
 }
 
-.feedBack h2{
+.feedBack h3{
+    margin-top: 10px;
     font-weight: bold;
 }
 .feedBack{
@@ -264,4 +265,10 @@ white-space: break-word;
 
 .containerDom p{
     color: red;
+}
+
+.feedBack span{
+    color: #0b1d66;
+    font-size: 20px;
+
 }

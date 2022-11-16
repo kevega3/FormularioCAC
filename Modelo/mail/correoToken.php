@@ -34,8 +34,7 @@ $mail->AddAddress($destinatario); // Esta es la direcci�n a donde enviamos los
 
 $mail->Subject = "Consolidado CAC"; // Este es el titulo del email.
 $mensajeHtml = nl2br($mensaje);
-$mail->Body = "<!DOCTYPE html>
-<html lang='es'>
+$mail->Body = "<html lang='es'>
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -134,22 +133,21 @@ $mail->Body = "<!DOCTYPE html>
 
       <div class='mensaje'>
         <div class='titulo'>
-          <h3>Solicitud de Usuario SISCAC  <span>Habilitado</span></h3> 
+          <h3>Estudio de madurez,codigo <span>Habilitado</span></h3> 
         </div>
         <br>
         
-      </br>
      
       </br>
       <div class='texto'>
-        <p>Ingrese a la siguiente pagina con el siguiente codigo  <strong>{$Token}</strong> para gestionar su solicitud de usuario <b>SISCAC</b>
-           <span><b>Este codigo no lo debe compartir con ninguna persona o entidad.</b></span> 
-        </p> 
+        <p>
+        De conformidad con estudio de madurez en gobierno y gestión de dato y teniendo en cuenta la importancia que requiere diligenciar el formulario nos permitimos compartir el siguiente codigo <strong>{$Token}</strong> Recuerde que <span><b>este codigo no debe ser compartido con ninguna persona o entidad</span></b>
+        </p>
       </div>
         
         </br>
         <center>
-          <a class='boton' href='http://localhost/UsuariosSISCAC/' target='_blank'>Generar solicitud</a>
+          <a class='boton' href='http://localhost/CUESTIONARIOCAC/' target='_blank'>Ir al cuestionario</a>
         </center>
       </div>
       <div class='footer'>
@@ -158,7 +156,7 @@ $mail->Body = "<!DOCTYPE html>
     </div>
   </div>
 </body>
-</html> "; // Texto del email en formato HTML
+</html>"; // Texto del email en formato HTML
 $mail->AltBody = "{$mensaje} \n\n "; // Texto sin formato HTML
 // FIN - VALORES A MODIFICAR //
 
