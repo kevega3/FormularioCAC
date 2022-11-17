@@ -3,10 +3,17 @@ include ('Conexion.php');
 require("mail/class.phpmailer.php");
 require("mail/class.smtp.php");
 $idPersona = $_REQUEST['idPersona']; 
-$idPregunta = $_REQUEST['idPregunta']; 
-$fecha = " " ;
-$Respuesta =  $_REQUEST['idPregunta']; 
-$RespuestaAbierta=  $_REQUEST['RespuAbierta'];
+$idPregunta = $_REQUEST['Pregunta']; 
+$Respuesta =  $_REQUEST['Respuesta2'];
+
+
+// if(is_array($Respuesta)){
+// $cadena_equipo = implode(",", $Respuesta);
+// }else{
+//     $cadena_equipo = $Respuesta;
+// }
+$RespuestaAbierta=  $_REQUEST['RespuestaAbierta'];
+
 
 
 date_default_timezone_set('America/Bogota'); 

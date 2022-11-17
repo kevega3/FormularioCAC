@@ -29,6 +29,7 @@ function CerrarSesion() {
 
 function ValidValues() {
   var arr = $(".validar");
+  var PreguntasHechas = $(".request");
   var control = true;
   if (arr.length > 0) {
     for (i = 0; i < arr.length; i++) {
@@ -41,29 +42,33 @@ function ValidValues() {
         control = false;
         break;
       }
+    }
       if (control) {
         let loader = document.querySelector(".loader");
         loader.classList.add("active");
         var idPersona = $("#Person").val();
-        for (j = 0; j < arr.length; j++) {
-          var idPregunta = $("#".j).val();
-          var Respuesta = $("#").val();
-          var RespuestaAbierta = $("#").val();
+        var n = 0;
+        for (j = 0; j < PreguntasHechas.length; j++) {
+          n++;
+          var Respuesta = $("#"+n).val();
+          var RespuestaAbierta = $("#PreguntaAbierta"+n).val();
+          var Pregunta = $("#Pregunta"+n).val();
+
+          if(Array.isArray(Respuesta)){
+            var Respuesta2 = Respuesta.join()
+          }else{
+            var Respuesta2 = Respuesta;
+          }
           $.post("../Modelo/InsertRespuesta.php", {
             idPersona:idPersona,
-            
-            
+            Respuesta2 :  Respuesta2,
+            RespuestaAbierta : RespuestaAbierta,
+            Pregunta : Pregunta
           },
             function (data, status) {
               loader.classList.remove("active");
-
-              // setTimeout("window.location='../Solicitudes.php'", 1500);
             })
         }
-
-
       }
     }
-
-  }
 }

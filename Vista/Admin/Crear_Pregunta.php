@@ -1,16 +1,12 @@
 <form action="../../Modelo/AgregarPregunta.php" method="POST">
     <!-- <input type="text" name="pregunta" placeholder="Pregunta"> -->
     <p><label for="w3review">Pregunta:</label></p>
-    <textarea id="w3review" name="w3review" rows="4" cols="100"> </textarea>
+    <textarea id="w3review" name="w3review" rows="4" cols="100" required> </textarea>
 
     <br>
     <br>
 
-    <select name="prioPreg" >
-        <option disabled selected value="">Prioridad Pregunta</option>
-        <option value="1">1</option>
-        <option value="1">2</option>
-    </select>
+    <input type="text" name="prioPreg" required placeholder="Prioridad Pregunta">
 
     <br>
     <br>
@@ -48,14 +44,14 @@
 
 
 
-    <!-- <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select" name="Rol[]">
+  <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select" name="Rol[]" required>
     <option disabled selected value="" required>¿Aquien se le va a preguntar?</option>
         <option value="1">Líderes negocio</option>
         <option value="2">Usuarios negocio</option>
         <option value="3">Líderes Tecnología</option>
         <option value="4">Equipo tecnología</option>
         <option value="5">Equipo Seguridad y privacidad</option>
-    </select>  -->
+    </select>
 
 
 
@@ -65,7 +61,7 @@
     <br>
     <br>
 
-    <input type="text" name="TipoRespuesta" placeholder="TipoRespuesta">
+    <input type="text" name="TipoRespuesta" placeholder="TipoRespuesta" required>
     
 
     <input type="submit">
