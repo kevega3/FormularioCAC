@@ -2,7 +2,7 @@
     <input type="hidden" name="Person" id="Person" value="<?php echo $id?>">
     <?php
     //$TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento'; 
-    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idPregunta = 11';
+    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idPregunta = 142' ;
     $res =  mysqli_query($conn,$TraerPreguntas);
     $contador = 0;
     while ($fila=mysqli_fetch_array($res)) { 
@@ -42,13 +42,14 @@
                         $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
                         if($ValTipoPregunta == 'Abierta'){
                         ?>
-                        <input type="text" class="validar" placeholder="Si/No Justifique su respuesta" id="<?php echo $contador ?>"
-                            name="<?php echo $contador ?>">
+                        <input type="text" class="validar" placeholder="Si/No Justifique su respuesta" id="<?php echo $contador ?>" name="<?php echo $contador ?>">
+                        <input type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" class="validar" id="<?php echo "PreguntaAbierta". $contador ?>">        
                         <?php  
-                        }elseif($ValTipoPregunta == 'Numerico'){
+                        }elseif($ValTipoPregunta == 'Porcentaje'){
                         ?>
-                        <input type="number" class="validar" placeholder="Solo puede agregar numeros" id="<?php echo $contador ?>"
+                        <input type="number" class="validar" placeholder="Agregue el porcentaje" id="<?php echo $contador ?>"
                             name="<?php echo $contador ?>">
+                        <input class="validar" type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" id="<?php echo "PreguntaAbierta". $contador ?>">    
                         <?php 
                         }else{
                         while ($filaBuscaRespuestas=mysqli_fetch_array($ResRespuestas)){

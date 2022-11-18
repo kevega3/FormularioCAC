@@ -122,3 +122,12 @@
   </div>
 </body>
 </html>                       
+
+
+
+INSERT INTO `bancorespuesta`(`idPregunta`, `Respuesta`, `Activo`, `TipoPregunta`, `ValTipoPregunta`, `Valor`) VALUES (14,'IPS - HC ELECTRONICA',1,'Multiple_IntegracionSistema','MultiSelect',1), 
+(14,'Integración manual (Manual data integration) ',1,'Multiple_IntegracionSistema','MultiSelect',2),
+(14,'Integración con uso de middleware (Middleware data integration)',1,'Multiple_IntegracionSistema','MultiSelect',3),
+(14,' Integración a partir de aplicaciones (Application-based integration)',1,'Multiple_IntegracionSistema','MultiSelect',4),
+(14,'Integración de acceso uniforme (Uniform access integration)',1,'Multiple_IntegracionSistema','MultiSelect',5),
+(14,'Integración de almacenamiento común (Common storage integration)',1,'Multiple_IntegracionSistema','MultiSelect',6)

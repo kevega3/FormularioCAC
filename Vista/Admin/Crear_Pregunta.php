@@ -46,11 +46,11 @@
 
   <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select" name="Rol[]" required>
     <option disabled selected value="" required>¿Aquien se le va a preguntar?</option>
-        <option value="1">Líderes negocio</option>
-        <option value="2">Usuarios negocio</option>
-        <option value="3">Líderes Tecnología</option>
-        <option value="4">Equipo tecnología</option>
-        <option value="5">Equipo Seguridad y privacidad</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
     </select>
 
 
