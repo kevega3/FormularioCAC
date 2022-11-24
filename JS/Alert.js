@@ -31,6 +31,8 @@ function ValidValues() {
   var arr = $(".validar");
   var PreguntasHechas = $(".request");
   var control = true;
+  var controlValues = true;
+  var idPersona = $("#Person").val();
   if (arr.length > 0) {
     for (i = 0; i < arr.length; i++) {
       if (arr[i].value === '' || arr[i].value === null) {
@@ -43,32 +45,54 @@ function ValidValues() {
         break;
       }
     }
-      if (control) {
-        let loader = document.querySelector(".loader");
-        loader.classList.add("active");
-        var idPersona = $("#Person").val();
-        var n = 0;
-        for (j = 0; j < PreguntasHechas.length; j++) {
-          n++;
-          var Respuesta = $("#"+n).val();
-          var RespuestaAbierta = $("#PreguntaAbierta"+n).val();
-          var Pregunta = $("#Pregunta"+n).val();
+    if (control) {
+      let loader = document.querySelector(".loader");
+      loader.classList.add("active");
 
-          if(Array.isArray(Respuesta)){
-            var Respuesta2 = Respuesta.join()
-          }else{
-            var Respuesta2 = Respuesta;
-          }
-          $.post("../Modelo/InsertRespuesta.php", {
-            idPersona:idPersona,
-            Respuesta2 :  Respuesta2,
-            RespuestaAbierta : RespuestaAbierta,
-            Pregunta : Pregunta
-          },
-            function (data, status) {
+      var n = 0;
+      for (j = 0; j < PreguntasHechas.length; j++) {
+
+        n++;
+        var cadena = $("#" + n).val();
+        var RespuestaAbierta = $("#PreguntaAbierta" + n).val();
+        var Pregunta = $("#Pregunta" + n).val();
+
+        var Respuesta = cadena.toString();
+        $.post("../Modelo/InsertRespuesta.php", {
+          idPersona: idPersona,
+          Respuesta: Respuesta,
+          RespuestaAbierta: RespuestaAbierta,
+          Pregunta: Pregunta
+        },
+          function (res) {
+            if (res == 'Success') {
+              
+            } else {
               loader.classList.remove("active");
-            })
-        }
+              controlValues = false;
+              Swal.fire({
+                icon: 'error',
+                title: 'Tenemos un error inesperado',
+                text: 'Intentalo mas tarde o comunicate con el admin',
+              })
+            }
+          })
       }
+      $.post("../Modelo/TerminarForm.php", {
+        idPersona: idPersona,
+      }, function (res2) {
+        if (res2 == 'Success') {
+          window.location.replace("../Vista/Gracias.php");
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Tenemos un error inesperado',
+            text: 'Intentalo mas tarde o comunicate con el admin',
+          })
+        }
+      })
+
+
     }
+  }
 }

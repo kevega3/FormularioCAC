@@ -22,19 +22,6 @@ if ($varsesion == null || ($varsesion = '' || mysqli_num_rows($res)==0)) {
         $AreasCono = $fila['AreasCono']; 
     }
     
-    
-    // $inactividad = 60;
-    // if(isset($_SESSION["timeout"])){
-    //     // Calcular el tiempo de vida de la sesión (TTL = Time To Live)
-    //     $sessionTTL = time() - $_SESSION["timeout"];
-    //     if($sessionTTL > $inactividad){
-            
-    //         echo "<script>alert('La Sesion a caducado, vuelve a loguearte')</script>";
-    //         echo "<script>window.location.replace('../../index.php')</script>";
-    //         die();
-    //     }
-    // }
-    // $_SESSION["timeout"] = time(); 
 }
 
     

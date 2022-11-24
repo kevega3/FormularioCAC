@@ -1,8 +1,7 @@
 <div id="Calidad" class="tabcontent">
     <input type="hidden" name="Person" id="Person" value="<?php echo $id?>">
     <?php
-    //$TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento'; 
-    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idPregunta = 142' ;
+    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento' ;
     $res =  mysqli_query($conn,$TraerPreguntas);
     $contador = 0;
     while ($fila=mysqli_fetch_array($res)) { 
@@ -42,14 +41,16 @@
                         $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
                         if($ValTipoPregunta == 'Abierta'){
                         ?>
-                        <input type="text" class="validar" placeholder="Si/No Justifique su respuesta" id="<?php echo $contador ?>" name="<?php echo $contador ?>">
+                        <textarea class="validar form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo $contador ?>" name="<?php echo $contador ?>" ></textarea>
                         <input type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" class="validar" id="<?php echo "PreguntaAbierta". $contador ?>">        
+                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
                         <?php  
                         }elseif($ValTipoPregunta == 'Porcentaje'){
                         ?>
                         <input type="number" class="validar" placeholder="Agregue el porcentaje" id="<?php echo $contador ?>"
                             name="<?php echo $contador ?>">
                         <input class="validar" type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" id="<?php echo "PreguntaAbierta". $contador ?>">    
+                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
                         <?php 
                         }else{
                         while ($filaBuscaRespuestas=mysqli_fetch_array($ResRespuestas)){
@@ -57,10 +58,8 @@
                         ?>
                         <option value="<?php echo $filaBuscaRespuestas['Valor']; ?>">
                             <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
-                    </select>
-                    <input type="text" class="validar" placeholder="Justifique su respuesta"
-                        name="<?php echo "PreguntaAbierta". $contador ?>"
-                        id="<?php echo "PreguntaAbierta". $contador ?>">
+                    </select> 
+                    <textarea class="validar form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbierta". $contador ?>" id="<?php echo "PreguntaAbierta". $contador ?>" ></textarea>
                     <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
                     <?php 
                         }

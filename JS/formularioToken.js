@@ -167,3 +167,8 @@ function ReenviarCodigo(CorreoEntidad,id){
 	})
 
 }
+
+
+function clikme(){
+	setTimeout("window.location='../../Vista/Admin/'", 1500);
+}

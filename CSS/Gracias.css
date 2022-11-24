@@ -1,0 +1,396 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	box-sizing: border-box;
+}
+
+.titulos{
+	color: #17309C;
+	font-weight: bold;
+}
+
+@media screen and (max-width:550px){
+	.LogoImgen{
+		width: 80vw;
+	}
+
+	
+}
+@media screen and (min-width:980px){
+	.imagen{
+
+	background-image: url(../IMG/beautiful-asian-woman-uses-smartphone-app-sends-messages-in-social-media-chat-points-away-on-copy-space-wears-casual-jumper.jpg);
+	background-repeat:no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: center center;
+	}
+.imagen{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5bb5cf+0,aadfed+100 */
+background-color: rgb(91,181,207); /* Old browsers */
+background-color: -moz-linear-gradient(-45deg, rgba(91,181,207,1) 0%, rgba(170,223,237,1) 100%); /* FF3.6-15 */
+background-color: -webkit-linear-gradient(-45deg, rgba(91,181,207,1) 0%,rgba(170,223,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background-color: linear-gradient(135deg, rgba(91,181,207,1) 0%,rgba(170,223,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5bb5cf', endColorstr='#aadfed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.ContenedorimagenSegundaria{
+	display: none;
+}
+	
+}
+
+
+
+@media screen and (min-width:640px){
+
+h1{
+	font-size: 30px;
+}
+h2{
+	font-size: 25px;
+}
+h3{
+	font-size: 20px;
+}
+h4{
+	font-size:15px;
+}
+h5{
+	font-size: 10px;	
+}	
+}
+@media screen and (min-width:1024px){
+
+h1{
+	font-size: 35px;
+}
+h2{
+	font-size: 25px;
+}
+h3{
+	font-size: 20px;
+}
+h4{
+	font-size:15px;
+}
+h5{
+	font-size: 10px;	
+}	
+}
+
+@media screen and (min-width:1280px){
+
+h1{
+	font-size: 40px;
+}
+h2{
+	font-size: 30px;
+}
+h3{
+	font-size: 25px;
+}
+h4{
+	font-size:20px;
+}
+h5{
+	font-size: 15px;	
+}	
+}
+
+
+.contenedorSegundario{
+	width: 100%;
+	height: 94vh;
+	text-align: center;
+	position: relative;
+	background-color: transparent;
+    background-image: linear-gradient(100deg,#000000C7 43%,#0000005E 86%);
+    opacity: .98;
+    transition: background .3s,border-radius .3s,opacity .3s;
+}
+
+.ContenedorimagenSegundaria{
+    width: 100%;
+    height: 94vh;
+    
+}
+.ImagenSegundaria{
+    width: 100%;
+    height:100%;
+    opacity: .4;
+    content:'';
+    position: absolute;
+        top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+.titulo1{
+	position: absolute;
+	left: 0%;
+    bottom: 0%;
+    right: 0%;
+    top: 33%;
+    color: white;
+    padding: 0px 10% 0px 10%;
+}
+.titulo2{
+	position: absolute;
+	left: 0%;
+    bottom: 0%;
+    right: 0%;
+    top: 60%;
+    color: white;
+    padding: 0px 20% 0px 20%;
+}
+.titulo3{
+	position: absolute;
+	left: 0%;
+    bottom: 0%;
+    right: 0%;
+    top: 90%;
+    color: white;
+}
+
+
+.LogoImg{
+	position: absolute;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    top: 4%;
+    margin: auto;
+
+}
+.btn-Corporativo{
+    background: #17309C;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius:10px ; 
+}
+
+.btn-Corporativo:hover{
+    background: #112677;
+    color: white;
+}
+.web{
+    color: #17309C;
+}
+.imagenFooter{
+	box-sizing: border-box;
+	/* background-image: url(../../Img/beautiful-young-woman-using-her-mobile-phone-at-home.jpg); */
+    background-image: url(../IMG/beautiful-young-woman-using-her-mobile-phone-at-home.jpg);
+	background-color: #fff;
+	background-repeat:no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: center center;
+
+}
+.contenedorImg{
+	width:100%;
+	height: 50vh;	
+	text-align: center;
+	position: relative;
+	/*background-color: rgba(0,0,0,0.4);*/
+	background-color: transparent;
+    background-image: linear-gradient(100deg,#000000C7 43%,#0000005E 86%);
+    opacity: .98;
+    transition: background .3s,border-radius .3s,opacity .3s;
+}
+.contenedorContenidoFooter{
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	margin: auto;
+}
+
+.textoFooter{
+	color: white;
+	padding: 4%;
+}
+.footer1{
+	background: black;
+	width: 100%;
+	height: 20vh;
+}
+.footer1{
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+
+
+
+.footerr{
+	width: 100%;
+	background-color: #17309C;
+	height: auto;
+	font-family: 'Raleway', sans-serif;
+	padding-top: 1px;
+	color: #fff;
+}
+
+
+.footer-contenidos{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	color: #FFF ;
+}
+.tituloFooter{
+	font-size: 1.3rem;
+	font-weight: 1000;
+	text-transform: capitalize;
+	line-height: rem;
+}
+.footer-contenidos{
+	max-width: 500px;
+	margin: 7px auto;
+	line-height: px;
+	font-size: 14px;
+}
+.socialss{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0.5rem 0 0.5rem 0;
+}
+.socialss li{
+	margin: 0 15px;
+}
+.socialss a{
+	text-decoration: none;
+	color: #fff;
+}
+.socialss a i{
+	font-size: 25px;
+	padding: 2px;
+}
+.socialss a:hover i{
+	color: #5792d1;
+}
+.footer-bottomm{
+	background: #17309C;
+	width: 100vm;
+	padding: 1px 0;
+	text-align: center;
+}
+.footer-bottomm p{
+	font-size: 14px;
+	word-spacing: 3px;
+	text-transform: capitalize;
+}
+.footer-bottomm span{
+	text-transform: uppercase;
+	opacity: .4;
+	font-weight: 200;
+}
+
+
+
+
+.resumen{
+    padding:4%;
+    background: white;
+}
+.textoResumen{
+    color: #4f4f4f;
+
+}
+.link{
+    text-decoration: none;
+}
+
+
+.contenedorBeneficios{
+	padding: 0px 4% 4% 4%;
+	background: white;
+
+
+}
+.beneficios{
+padding: 4% 0px 4% 0px;
+
+}
+.iconos{
+	color: #17309C;
+}
+.headerImagen{
+	display: grid;
+	text-align: center;
+	font-size: 50px;
+}
+.texto{
+	    display: grid;
+    text-align: center;
+}
+.headerImagen{
+	padding: 20px;
+}
+.borde{
+	border-bottom: solid 3px #17309C;
+	width: 15%;
+}
+
+
+
+
+.contenedorReporte{
+	background: white;
+}
+.vacioReporte{
+	height: 50px;
+	background: white;
+}
+.reporteBI{
+	width: 95%;
+	
+}
+@media screen and (min-width:370px){
+	.reporteBI{
+	width: 95%;
+	height: 500px
+}
+@media screen and (min-width:540px){
+	.reporteBI{
+	width: 95%;
+	height: 450px
+}
+
+@media screen and (min-width:720px){
+	.reporteBI{
+	width: 95%;
+	height: 600px
+}
+
+@media screen and (min-width:960px){
+	.reporteBI{
+	width: 95%;
+	height: 700px;
+}	
+@media screen and (min-width:1140px){
+	.reporteBI{
+	width: 95%;
+	height: 800px;
+}
+
+@media screen and (min-width:1140px){
+	.reporteBI{
+	width: 95%;
+	height: 900px;
+}
+}
