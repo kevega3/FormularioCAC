@@ -141,7 +141,7 @@ $mail->Body = "<html lang='es'>
       </br>
       <div class='texto'>
         <p>
-        De conformidad con estudio de madurez en gobierno y gestión de dato y teniendo en cuenta la importancia que requiere diligenciar el formulario nos permitimos compartir el siguiente codigo <strong>{$Token}</strong> Recuerde que <span><b>este codigo no debe ser compartido con ninguna persona o entidad</span></b>
+        De conformidad con estudio de madurez en gobierno y gestión de dato y teniendo en cuenta la importancia que requiere diligenciar el formulario nos permitimos compartir el siguiente código <strong>{$Token}</strong> Recuerde que <span><b>este código  no debe ser compartido con ninguna persona o entidad</span></b>
         </p>
       </div>
         

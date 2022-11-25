@@ -64,10 +64,13 @@ inputs.forEach((input) => {
 	input.addEventListener("blur", validarFormulario);
 });
 
+
+const terminos = document.getElementById('terminos');
+
 formulario.addEventListener("submit", (e) => {
 	e.preventDefault();
 
-	if (campos.codigo) {
+	if (campos.codigo && terminos.checked) {
 		e.currentTarget.submit();
 		document
 			.querySelectorAll(".formulario__grupo-correcto")

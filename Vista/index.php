@@ -20,8 +20,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
     <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
-    <title>Bienvenido</title>
+    
     <link rel="icon" href="../IMG/simbolo_cac_color.png" type="image/x-icon" />
     <!-- letras   -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,9 +34,9 @@
     </style>
 
 
-    <div class="" id="contenedor_carga">
+    <!-- <div class="" id="contenedor_carga">
         <div id="carga"></div>
-</div>
+</div> -->
 
     <div class="loader ">
         <div class="ContenedorEsperar">
@@ -118,7 +117,6 @@
         <div class="ContenedorFormulario">
 
 
-            <?php //include('TodosTaps.php')?>
 
 
             <!-- <div class="contenedorGrd"> -->
@@ -139,16 +137,16 @@
                 <div class="linear"></div>
 
                 <div class="feedBack">
-                    <h3><b>INTRODUCCIÓN</b> </h3>
+                    <h4><b>INTRODUCCIÓN</b>  </h4>
                     <p>
                     Bienvenidos al ejercicio de valoración general de madurez en gestión y gobierno de datos en las entidades del sector salud, la participación de su entidad es fundamental.
                     </p>
                     <span>
-                    Complete el cuestionario con exito:
+                    Recomendaciones para completar este formulario con éxito
                     </span>
-                    <li>Conteste todas las preguntas.</li>
-                    <li>Justifique sus repuestas, cada pregunta tiene un apartado de campo abierto para que explique al detalle su respuesta.</li>
-                    <li>Cuando haya contestado cada una de las preguntas puede terminar su cuestionario dandole click al boton enviar.</li>
+                    <li>Contestar todas las preguntas.</li>
+                    <li>Justifique su repuesta, cada pregunta tiene un apartado de campo abierto para que explique al detalle su respuesta.</li>
+                    <li>Cuando haya contestado cada una de las preguntas puede terminar su cuestionario dándole click al botón enviar.</li>
                     </p>
                     
                 </div>
@@ -157,7 +155,7 @@
 
 
 
-            <?php include ('Tabs/Preguntas.php') ?>
+            <?php include ('Preguntas.php') ?>
 
 
 
@@ -188,7 +186,7 @@
 
     <script>
      $(".chosen-select").chosen({
-        no_results_text: "Oops, nothing found!"
+        no_results_text: "Reinicia la pagina, Error"
       })
 </script>
 <script>

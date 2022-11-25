@@ -2,28 +2,18 @@
 
 
 
-$servidor ="localhost";
-$usuario ="root";
-$contraseña ="";
-$bd="cuestionariocac";
-
-$conn =mysqli_connect($servidor, $usuario, $contraseña, $bd);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "cuestionariocac";
 
 
-// $serverName = "MKBOG016\MKBOG016"; //serverName\instanceName
-// $connectionInfo = array( "Database"=>"cuestionarioCAC", "UID"=>"sa", "PWD"=>"Cuent42021$*");
-// $conn = sqlsrv_connect( $serverName, $connectionInfo);
+$conn = new mysqli("$servername","$username","$password","$dbname");
+$conn->set_charset("utf8");
 
-// if( $conn ) {
-// }else{
-//      echo "Conexión no se pudo establecer.<br />";
-//      die( print_r( sqlsrv_errors(), true));
-// }
-
-// $cadenaCnx="sqlsrv:server=MKBOG016\MKBOG016;database=cuestionarioCAC";
-// 			$user="sa";
-// 			$pass="Cuent42021$*";
-
-// 			$cnx= new PDO($cadenaCnx,$user,$pass);
-
+if ($conn -> connect_errno) {
+	echo "Falló la conexión: " . $conn -> connect_error;
+	exit();
+}
 ?>
+

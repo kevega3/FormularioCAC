@@ -10,19 +10,22 @@ $Token = substr(str_shuffle($Strings), $x, $y);
 
     $NombreEntidad = $_REQUEST['NombreEntidad']; 
     $NombrePersona = $_REQUEST['NombrePersona'];
-    $SelectRol = $_REQUEST['SelectRol'];
+    $Rol = $_POST['RespuestaRol'];
+    
+    //$SelectRol = $_REQUEST['SelectRol'];
     
     include("mail/correoToken.php");
     if($EstadoEnvioUsuario == "Exitoso"){
-        $insert ="INSERT INTO `persona`(`nombreEntidad`, `nombre1`, `correo`, `token`, `activo`, `idRol`) VALUES ('$NombreEntidad','$NombrePersona','$CorreoNotificador','$Token ',1,$SelectRol)";
+        $insert ="INSERT INTO `persona`(`nombreEntidad`, `nombre1`, `correo`, `token`, `activo`, `idRol`) VALUES ('$NombreEntidad','$NombrePersona','$CorreoNotificador','$Token',1,'$Rol')";
+        echo $insert;
     if((!$res= mysqli_query($conn,$insert))){
+        echo "Error en la insercion ";
         
-        echo "1 registro exitoso INSERT";
     }else{
-        echo "<alert>Error, contactese con el administrador</alert>";
+        echo "Success";
     }
     }else{
-        echo "<script>alert('Error ERROR, contactese con el admin insert')</script>";
+        echo "No se mando el correo";
     }
 // }
 ?>

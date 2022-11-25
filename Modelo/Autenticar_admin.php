@@ -19,7 +19,6 @@ if ($varsesion == null || ($varsesion = '' || mysqli_num_rows($res)==0)) {
     }
     while ($fila=mysqli_fetch_array($res2)) {
         $RolPersona=$fila['idRol']; 
-        $AreasCono = $fila['AreasCono']; 
     }
     
 }

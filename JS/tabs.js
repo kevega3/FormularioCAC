@@ -13,4 +13,4 @@ function openCity(evt, cityName) {
   }
 
 
-  document.getElementById("btn2").click();
+  document.getElementById("btn1").click();

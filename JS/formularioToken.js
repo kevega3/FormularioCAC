@@ -105,17 +105,19 @@ function CrearToken() {
 			var NombrePersona = $("#NombrePersona").val();
 			var CorreoNotificador = $("#CorreoNotificador").val();
 			var SelectRol = $("#SelectRol").val();
-
+			var RespuestaRol = SelectRol.toString();
 			let loader = document.querySelector(".loader");
 			loader.classList.add("active");
 			$.post("../../Modelo/AgregarToken.php", {
 				NombreEntidad: NombreEntidad,
 				NombrePersona: NombrePersona,
 				CorreoNotificador: CorreoNotificador,
-				SelectRol: SelectRol
+				RespuestaRol: RespuestaRol
 			},
 				function (data, status) {
 					loader.classList.remove("active");
+
+					if(data = 'Success' || data == 'Success'){
 					Swal.fire({
 						position: 'center',
 						icon: 'success',
@@ -123,7 +125,11 @@ function CrearToken() {
 						showConfirmButton: false,
 						timer: 1500
 					});
-					setTimeout("window.location='../pag/Token.php'", 1500);
+					setTimeout("window.location='../../Vista/Admin/'", 1500);
+					}else{
+						alert("Error llamar al admin");
+					}
+					
 				})
 
 		}
@@ -169,6 +175,3 @@ function ReenviarCodigo(CorreoEntidad,id){
 }
 
 
-function clikme(){
-	setTimeout("window.location='../../Vista/Admin/'", 1500);
-}

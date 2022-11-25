@@ -10,13 +10,13 @@ $Token = substr(str_shuffle($Strings), $x, $y);
 $idRe = $_REQUEST['idRe']; 
 $UpbateUser ="UPDATE `persona` SET `token`='$Token'  WHERE idPersona = '$idRe'";
     if(!$res = mysqli_query($conn,$UpbateUser)){ 
-        echo "<script>alert('Error ERROR, contactese con el admin UPDATE ')</script>";
+      echo "Error";
     }else{
         include("mail/correoToken.php");
         if(($EstadoEnvioUsuario == "Exitoso")){
-            echo "1 registro exitoso UPDATE";
+            echo "Success";
         }else{
-            echo "<alert>Error, contactese con el administrador</alert>";
+            echo "Error";
         }
     }
 

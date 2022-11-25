@@ -105,7 +105,7 @@ white-space: break-word;
 
 }
 
-.feedBack h3{
+.feedBack h4{
     margin-top: 10px;
     font-weight: bold;
 }
@@ -271,4 +271,13 @@ white-space: break-word;
     color: #0b1d66;
     font-size: 20px;
 
+}
+
+.formularioQuestion h5{
+    margin-top: 0px;
+}
+.DatosPersonas{
+    margin: 0% 2% 3% 2%;
+    border: 1px transparent solid;
+    border-radius: 10px;
 }

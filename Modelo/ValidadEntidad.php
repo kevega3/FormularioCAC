@@ -18,7 +18,7 @@ if ($_POST['entrar']) {
 
 
 
-    $query= "SELECT * FROM Persona   WHERE token =  '$codigo' ";
+    $query= "SELECT * FROM persona   WHERE token =  '$codigo' ";
     $res= mysqli_query($conn,$query);
     if(!$res || mysqli_num_rows($res)==0){
         

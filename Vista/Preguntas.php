@@ -7,12 +7,14 @@
     while ($fila=mysqli_fetch_array($res)) { 
         $Rol = $fila['Rol'];
         $separador = ",";
+        $Rolperson2 = "1";
         $TipoRespuesta = $fila['TipoRespuesta'];
         $Descripcion = $fila['Descripcion'];
         $idPregunta = $fila['idPregunta'];
         $separada = explode($separador, $Rol);
         
-        if(in_array($RolPersona, $separada)){
+
+        if(in_array($Rolarray[0], $separada) || in_array($Rolarray[1], $separada) || in_array($Rolarray[2], $separada) || in_array($Rolarray[3], $separada) || in_array($Rolarray[4], $separada) ){
             $contador++;
         ?>
     <div class="formularioQuestion linearBlue row">
@@ -74,4 +76,13 @@
     }
     
 ?>
+<!-- <div class="formularioQuestion linearBlue row">
+    <div class="titleformul">
+    <h5><b>AUTORIZACIÓN DE MANEJO DE DATOS PERSONALES</b></h5>
+    </div>
+    <div class="DatosPersonas">
+        <p><input type="checkbox" name="datos_personales" class="micheckbox"  required="">   He leído y acepto la <a href="https://cuentadealtocosto.org/site/wp-content/uploads/2022/10/sgi_dg_22-_politica-de-tratamiento-de-datos-personales-v5.pdf" target="_blank">política</a> y <a href="https://cuentadealtocosto.org/site/wp-content/uploads/2022/10/sgi_dg_24_autorizacion-para-tratamiento-de-datos-personales-general-v4.pdf" target="_blank">autorización de tratamiento de datos personales</a>.</p>
+    </div>
+</div> -->
+
 </div>

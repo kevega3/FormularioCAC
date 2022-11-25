@@ -15,9 +15,10 @@ include ('Modelo/Key.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Login.css">
     <link rel="stylesheet" href="CSS/Reload.css">
+    <link rel="stylesheet" href="CSS/booststrap.css">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <!--Fuentes-->
     <!--Titulo-->
     <link rel="icon" href="IMG/simbolo_cac_color.png" type="image/x-icon" />
@@ -95,7 +96,13 @@ include ('Modelo/Key.php');
                             </p>
                         </div>
                         <br>
-
+                        <!-- Grupo: Terminos y Condiciones -->
+                        <div class="formulario__grupo" id="grupo__terminos">
+                            <label class="formulario__label">
+                                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                               He leído y acepto la <a href="https://cuentadealtocosto.org/site/wp-content/uploads/2022/10/sgi_dg_22-_politica-de-tratamiento-de-datos-personales-v5.pdf" target="_blank">política</a> y <a href="https://cuentadealtocosto.org/site/wp-content/uploads/2022/10/sgi_dg_24_autorizacion-para-tratamiento-de-datos-personales-general-v4.pdf" target="_blank">autorización de tratamiento de datos personales</a>.    
+                                                        </label>
+                        </div>
 
 
                         <div class="formulario__mensaje" id="formulario__mensaje">
