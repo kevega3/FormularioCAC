@@ -193,8 +193,8 @@ white-space: break-word;
 .formularioQuestion{
     background: white;
     height: auto;
-    width: 64%;
-    margin: 10px;
+    width: 99%;
+    margin: 0px 0px 40px 7px;
     border-radius: 10px;
     position: relative;
     -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
@@ -231,15 +231,15 @@ white-space: break-word;
 
   .btnEnviar {
     position: fixed;
-    right: 8vh;
-    bottom: 3vh;
+    right: 12vh;
+    bottom: 4vh;
     padding: 22px 27px;
     background: #5d45aa;
     color: white;
     font-size: 22px;
     border: none;
     border-radius: 60%;
-    z-index: 100;
+    z-index: 44;
 }
 
 
@@ -280,4 +280,18 @@ white-space: break-word;
     margin: 0% 2% 3% 2%;
     border: 1px transparent solid;
     border-radius: 10px;
+}
+
+
+.Remove{
+    display: none;
+}
+.NoRemove{
+    display: flex;
+}
+
+.ContenedorBton{
+    width: 100vh;
+    height: 100%;
+    position: relative;
 }

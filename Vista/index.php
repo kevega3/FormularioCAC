@@ -15,12 +15,13 @@
     <link rel="stylesheet" href="../CSS/btnlogin.css">
     <link rel="stylesheet" href="../CSS/Reload_Esperar.css">
     <link rel="stylesheet" href="../CSS/Reload.css">
+    <link rel="stylesheet" href="../CSS/LineaTemporal.css">
 
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
-    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
-    
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+
     <link rel="icon" href="../IMG/simbolo_cac_color.png" type="image/x-icon" />
     <!-- letras   -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,16 +51,14 @@
 
 
     <div class="container-fluid ">
-
-        <button class="btnEnviar" id="Import" onclick="ValidValues()">
-        <i class="fas fa-paper-plane"></i>
-        </button>
+        <?php include('Preguntas/btn.php')?>
+        
 
         <div class="login-modal-overlay">
 
             <div class="login-modal">
                 <h1><b> BIENVENIDO</b> </h1>
-                <form action="../Modelo/ValidadAdmin.php" method="POST" >
+                <form action="../Modelo/ValidadAdmin.php" method="POST">
                     <div class="group">
                         <input type="text" required name="user"></span><span class="bar"></span>
                         <label>Usuario</label>
@@ -84,7 +83,7 @@
         <div class="headerform">
             <div class="containerImgIcono">
                 <img src="../IMG/simbolo_cac_color.png" class="iconoCAC" alt="" width="60px">
-                
+
                 <h5>ESTUDIO DE MADUREZ EN GOBIERNO Y GESTIÓN DEL DATO</h5>
             </div>
 
@@ -93,11 +92,11 @@
                     <i class="fas fa-home"></i>
                 </button>
 
-             
-                    <button type="text" class="openb icontools"><i class="fas fa-tools"></i>
-                        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                    </button>
-              
+
+                <button type="text" class="openb icontools"><i class="fas fa-tools"></i>
+                    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                </button>
+
 
 
 
@@ -110,7 +109,7 @@
 
 
 
-
+        <?php include('LineaTemporal.php') ?>
 
 
 
@@ -133,33 +132,134 @@
                 </div>
             </div>
 
-            <div class="formularioFeedBack row ">
+            
+
+            <div class="formularioFeedBack row" id="feedBack">
                 <div class="linear"></div>
 
-                <div class="feedBack">
-                    <h4><b>INTRODUCCIÓN</b>  </h4>
+                <div class="feedBack" >
+                    <h4><b>INTRODUCCIÓN</b> </h4>
                     <p>
-                    Bienvenidos al ejercicio de valoración general de madurez en gestión y gobierno de datos en las entidades del sector salud, la participación de su entidad es fundamental.
+                        Bienvenidos al ejercicio de valoración general de madurez en gestión y gobierno de datos en las
+                        entidades del sector salud, la participación de su entidad es fundamental.
                     </p>
                     <span>
-                    Recomendaciones para completar este formulario con éxito
+                        Recomendaciones para completar este formulario con éxito
                     </span>
                     <li>Contestar todas las preguntas.</li>
-                    <li>Justifique su repuesta, cada pregunta tiene un apartado de campo abierto para que explique al detalle su respuesta.</li>
-                    <li>Cuando haya contestado cada una de las preguntas puede terminar su cuestionario dándole click al botón enviar.</li>
+                    <li>Justifique su repuesta, cada pregunta tiene un apartado de campo abierto para que explique al
+                        detalle su respuesta.</li>
+                    <li>Cuando haya contestado cada una de las preguntas puede terminar su cuestionario dándole click al
+                        botón enviar.</li>
                     </p>
-                    
+
                 </div>
             </div>
 
 
 
+           
+            <!-- <div class="conttemp"> -->
+                <div class="events-content">
+                <input type="hidden" name="Person" id="Person" value="<?php echo $id?>">
+                    <ol style="padding: 0; margin: 0;">
+                        <li class="selected" data-date="01/01/2005">
+                            <h2>Area Conocimiento - Almacenamiento</h2>
+                            <?php include ('Preguntas/Alacenamiento.php') ?>
+                        </li>
 
-            <?php include ('Preguntas.php') ?>
+                        <li data-date="01/01/2010">
+                            <h2>Area Conocimiento - Arquitectura Empresarial</h2>
+                            <?php include ('Preguntas/AlamacenamientoEmpre.php') ?>
+                        </li>
 
+                        <li data-date="01/01/2015">
+                            <h2>Area Conocimiento - Arquitectura de datos</h2>
+                            <?php include ('Preguntas/ArquitecturadeDatos.php') ?>
+                        </li>
 
+                        <li data-date="01/01/2020">
+                            <h2>Area Conocimiento - Calidad</h2>
+                            <?php include ('Preguntas/Calidad.php') ?>
+                        </li>
 
+                        <li data-date="01/01/2025">
+                            <h2>Area Conocimiento - Ciberseguridad</h2>
+                            <?php include ('Preguntas/Ciberseguridad.php') ?>
+                        </li>
 
+                        <li data-date="01/01/2030">
+                            <h2>Area Conocimiento - Estrategia de datos</h2>
+                            <?php include ('Preguntas/Estrategia_de_datos.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2035">
+                            <h2>Area Conocimiento - Gestión de datos maestros</h2>
+                            <?php include ('Preguntas/Gestión_de_datos_maestros.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2040">
+                            <h2>Area Conocimiento - Gobierno</h2>
+                            <?php include ('Preguntas/Gobierno.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2045">
+                            <h2>Area Conocimiento - Mejora de Productividad</h2>
+                            <?php include ('Preguntas/Mejora_de_Productividad.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2050">
+                            <h2>Area Conocimiento - Seguridad de información y de los datos</h2>
+                            <?php include ('Preguntas/Seguridad_de_información.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2055">
+                            <h2>Area Conocimiento - Gestión documental y de contenidos</h2>
+                            <?php include ('Preguntas/Gestión_documental_y_de_contenidos.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2060">
+                            <h2>Area Conocimiento - Integracion e interoperabilidad</h2>
+                            <?php include ('Preguntas/Integracion_e_interoperabilidad.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2065">
+                            <h2>Area Conocimiento - Modelos de transformacion digital</h2>
+                            <?php include ('Preguntas/Modelos_de_transformacion_digital.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2070">
+                            <h2>Area Conocimiento - Metadatos</h2>
+                            <?php include ('Preguntas/Metadatos.php') ?>
+                        </li>
+
+                        <li data-date="01/01/2075">
+                            <h2>Area Conocimiento - Almacenamiento y operaciones</h2>
+                            <?php include ('Preguntas/Almacenamiento_y_operaciones.php') ?>
+                        </li>
+                        
+
+                        <li data-date="01/01/2080">
+                            <h2>Area Conocimiento - Datos maestros y de referencia</h2>
+                            <?php include ('Preguntas/Datos_maestros_y_de_referencia.php') ?>
+                        </li>
+
+                        
+                        <li data-date="01/01/2085">
+                            <h2>Area Conocimiento - Gestion Arquitectura de datos</h2>
+                            <?php include ('Preguntas/Gestion_Arquitectura_de_datos.php') ?>
+                        </li>
+
+                        
+                        <li data-date="01/01/2090">
+                            <h2>Area Conocimiento - Gestión de metadatos</h2>
+                            <?php include ('Preguntas/Gestión_de_metadatos.php') ?>
+                        </li>
+
+                        
+                    </ol>
+                </div>
+            <!-- </div> -->
 
 
 
@@ -185,19 +285,17 @@
     </div>
 
     <script>
-     $(".chosen-select").chosen({
+    $(".chosen-select").chosen({
         no_results_text: "Reinicia la pagina, Error"
-      })
-</script>
-<script>
- 
+    })
+    </script>
+    <script>
     window.onload = function() {
         var contenedor = document.getElementById('contenedor_carga');
         contenedor.style.visibility = 'hidden';
         contenedor.style.opacity = '0';
     }
-  
-</script>
+    </script>
 
 
 
@@ -207,7 +305,10 @@
 
     <script src="../JS/Alert.js"></script>
 
-    <script src="../JS/login.js"></script> 
+
+    <script src="../JS/LineTiempo.js"></script>
+
+    <script src="../JS/login.js"></script>
 </body>
 
 </html>

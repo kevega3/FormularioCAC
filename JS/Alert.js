@@ -27,13 +27,12 @@ function CerrarSesion() {
 
 
 
-function ValidValues() {
-  var arr = $(".validar");
+function ValidValuesAlamacenamientos() {
+  var arr = $(".Almacenamiento");
   var PreguntasHechas = $(".request");
   var control = true;
   var controlValues = true;
   var idPersona = $("#Person").val();
-  if ($('.micheckbox').prop('checked')) {
     if (arr.length > 0) {
       for (i = 0; i < arr.length; i++) {
         if (arr[i].value === '' || arr[i].value === null) {
@@ -79,29 +78,20 @@ function ValidValues() {
               }
             })
         }
-        $.post("../Modelo/TerminarForm.php", {
-          idPersona: idPersona,
-        }, function (res2) {
-          if (res2 == 'Success') {
-            window.location.replace("../Vista/Gracias.php");
-          } else {
-            Swal.fire({
-              icon: 'error',
-              title: 'Tenemos un error inesperado',
-              text: 'Intentalo mas tarde o comunicate con el admin',
-            })
-          }
-        })
-
-
+        // $.post("../Modelo/TerminarForm.php", {
+        //   idPersona: idPersona,
+        // }, function (res2) {
+        //   if (res2 == 'Success') {
+        //     window.location.replace("../Vista/Gracias.php");
+        //   } else {
+        //     Swal.fire({
+        //       icon: 'error',
+        //       title: 'Tenemos un error inesperado',
+        //       text: 'Intentalo mas tarde o comunicate con el admin',
+        //     })
+        //   }
+        // })
       }
     }
-  } else {
-    Swal.fire({
-      icon: 'warning',
-      title: 'AUTORIZACIÓN DE MANEJO DE DATOS PERSONALES',
-      text: 'No podemos seguir si no acepta los términos de manejo de datos personales',
-    })
-  }
 
 }

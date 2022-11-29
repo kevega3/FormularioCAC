@@ -1,7 +1,7 @@
 <div id="Calidad" class="tabcontent">
-    <input type="hidden" name="Person" id="Person" value="<?php echo $id?>">
+    
     <?php
-    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento' ;
+    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idAreaCon = 17' ;
     $res =  mysqli_query($conn,$TraerPreguntas);
     $contador = 0;
     while ($fila=mysqli_fetch_array($res)) { 
@@ -19,7 +19,7 @@
         ?>
     <div class="formularioQuestion linearBlue row">
         <div class="col">
-            <div class="titleformul">Pregunta <?php echo $contador." -  ".$Descripcion?>.</div>
+            <div class="titleformul">Pregunta <?php echo $contador?>.</div>
             <div class="questionFrom"><?php echo $fila['pregunta']; ?></div>
             <div class="request">
                 <?php 
@@ -76,13 +76,4 @@
     }
     
 ?>
-<!-- <div class="formularioQuestion linearBlue row">
-    <div class="titleformul">
-    <h5><b>AUTORIZACIÓN DE MANEJO DE DATOS PERSONALES</b></h5>
-    </div>
-    <div class="DatosPersonas">
-        <p><input type="checkbox" name="datos_personales" class="micheckbox"  required="">   He leído y acepto la <a href="https://cuentadealtocosto.org/site/wp-content/uploads/2022/10/sgi_dg_22-_politica-de-tratamiento-de-datos-personales-v5.pdf" target="_blank">política</a> y <a href="https://cuentadealtocosto.org/site/wp-content/uploads/2022/10/sgi_dg_24_autorizacion-para-tratamiento-de-datos-personales-general-v4.pdf" target="_blank">autorización de tratamiento de datos personales</a>.</p>
-    </div>
-</div> -->
-
 </div>
