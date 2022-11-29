@@ -1,3 +1,16 @@
+<?php
+
+if($Report13 == 1){
+?>
+<div id="ContGracias">
+    <h1>No hay Preguntas para responder</h1>
+    
+</div>
+<?php
+}else{
+?>
+
+
 <div id="Calidad" class="tabcontent">
     
     <?php
@@ -21,7 +34,7 @@
         <div class="col">
             <div class="titleformul">Pregunta <?php echo $contador?>.</div>
             <div class="questionFrom"><?php echo $fila['pregunta']; ?></div>
-            <div class="request">
+            <div class="request requestModelosTrasform">
                 <?php 
                     $TraerSelect= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                     $ResSelect=  mysqli_query($conn,$TraerSelect);
@@ -30,7 +43,7 @@
                         }
                         if($ValTipoPregunta == 'Select'){
                         ?>
-                <select class="validar" name="<?php echo $contador?>" id="<?php echo $contador?>" required>
+                <select class="Modelos_de_transformacion" name="<?php echo $contador?>" id="<?php echo $contador?>" required>
                     <option disabled selected value="">Seleccionar</option>
                     <?php    
                         }elseif($ValTipoPregunta == 'MultiSelect'){
@@ -43,15 +56,15 @@
                         $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
                         if($ValTipoPregunta == 'Abierta'){
                         ?>
-                        <textarea class="validar form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo $contador ?>" name="<?php echo $contador ?>" ></textarea>
-                        <input type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" class="validar" id="<?php echo "PreguntaAbierta". $contador ?>">        
+                        <textarea class="Modelos_de_transformacion form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo $contador ?>" name="<?php echo $contador ?>" ></textarea>
+                        <input type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" class="Modelos_de_transformacion" id="<?php echo "PreguntaAbierta". $contador ?>">        
                         <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
                         <?php  
                         }elseif($ValTipoPregunta == 'Porcentaje'){
                         ?>
-                        <input type="number" class="validar" placeholder="Agregue el porcentaje" id="<?php echo $contador ?>"
+                        <input type="number" class="Modelos_de_transformacion" placeholder="Agregue el porcentaje" id="<?php echo $contador ?>"
                             name="<?php echo $contador ?>">
-                        <input class="validar" type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" id="<?php echo "PreguntaAbierta". $contador ?>">    
+                        <input class="Modelos_de_transformacion" type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" id="<?php echo "PreguntaAbierta". $contador ?>">    
                         <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
                         <?php 
                         }else{
@@ -61,7 +74,7 @@
                         <option value="<?php echo $filaBuscaRespuestas['Valor']; ?>">
                             <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
                     </select> 
-                    <textarea class="validar form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbierta". $contador ?>" id="<?php echo "PreguntaAbierta". $contador ?>" ></textarea>
+                    <textarea class="Modelos_de_transformacion form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbierta". $contador ?>" id="<?php echo "PreguntaAbierta". $contador ?>" ></textarea>
                     <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
                     <?php 
                         }
@@ -77,3 +90,5 @@
     
 ?>
 </div>
+
+<?php } ?>

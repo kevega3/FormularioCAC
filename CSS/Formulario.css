@@ -287,11 +287,15 @@ white-space: break-word;
     display: none;
 }
 .NoRemove{
-    display: flex;
+    display: block;
 }
 
 .ContenedorBton{
     width: 100vh;
     height: 100%;
     position: relative;
+}
+
+#ContGracias{
+    display: contents;
 }

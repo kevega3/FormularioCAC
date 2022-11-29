@@ -280,16 +280,3 @@ jQuery(document).ready(function($){
 
 
 
-
-function ActivarIntro(){
-
-	var feedBack = document.getElementById("feedBack");
-	feedBack.classList.remove("Remove");
-	feedBack.classList.add("NoRemove");
-}
-
-function RemoveIntro(){
-	var feedBack = document.getElementById("feedBack");
-	feedBack.classList.add("Remove");
-	feedBack.classList.remove("NoRemove");
-}

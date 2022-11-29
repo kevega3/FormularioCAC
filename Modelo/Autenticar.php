@@ -53,15 +53,13 @@ if ($varsesion == null || ($varsesion = '' || mysqli_num_rows($res)==0)) {
                 $Rolarray[$k] = 0;
             }
         }
-
-        
-        
-        //$DescipcionRol =$fila['DescripcionRol']; 
     }
     
 }
 }
 
+
+    
 ?>     
 
 

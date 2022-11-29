@@ -70,7 +70,7 @@ include ('Modelo/Key.php');
 
 
             <div class="d-none d-md-block  col-md-6 col-lg-6 p-0">
-			<img src="img/Vector_2646.jpg" alt="" >
+			<img src="IMG/Vector_2646.jpg" alt="" >
 		</div>
 
                 <div class="col-sm-10 col-md-4 col-lg-4 formularioCAC">

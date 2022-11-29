@@ -1,3 +1,15 @@
+<?php
+
+if($Report8 == 1){
+?>
+<div id="ContGracias">
+    <h1>No hay Preguntas para responder</h1>
+    
+</div>
+<?php
+}else{
+?>
+
 <div id="Calidad" class="tabcontent">
     
     <?php
@@ -21,7 +33,7 @@
         <div class="col">
             <div class="titleformul">Pregunta <?php echo $contador?>.</div>
             <div class="questionFrom"><?php echo $fila['pregunta']; ?></div>
-            <div class="request">
+            <div class="request requestGobierno">
                 <?php 
                     $TraerSelect= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                     $ResSelect=  mysqli_query($conn,$TraerSelect);
@@ -30,12 +42,12 @@
                         }
                         if($ValTipoPregunta == 'Select'){
                         ?>
-                <select class="validar" name="<?php echo $contador?>" id="<?php echo $contador?>" required>
+                <select class="Gobierno" name="<?php echo "Gobierno". $contador?>" id="<?php echo "Gobierno". $contador?>" required>
                     <option disabled selected value="">Seleccionar</option>
                     <?php    
                         }elseif($ValTipoPregunta == 'MultiSelect'){
                         ?>
-                    <select data-placeholder="Seleccione uno o varios" multiple class="chosen-select " name="<?php echo $contador?>[]"  id="<?php echo $contador ?>">
+                    <select data-placeholder="Seleccione uno o varios" multiple class="chosen-select " name="<?php echo "Gobierno". $contador?>[]"  id="<?php echo "Gobierno" .$contador ?>">
                         <option disabled selected value="" required>Seleccione uno o varios</option>
                         <?php    
                         }
@@ -43,16 +55,16 @@
                         $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
                         if($ValTipoPregunta == 'Abierta'){
                         ?>
-                        <textarea class="validar form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo $contador ?>" name="<?php echo $contador ?>" ></textarea>
-                        <input type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" class="validar" id="<?php echo "PreguntaAbierta". $contador ?>">        
-                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
+                        <textarea class="Gobierno form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo "Gobierno". $contador ?>" name="<?php echo "Gobierno".$contador ?>" ></textarea>
+                        <input type="hidden" name="<?php echo "PreguntaAbiertaGobierno". $contador ?>" value="Null" class="Gobierno" id="<?php echo "PreguntaAbiertaGobierno". $contador ?>">        
+                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaGobierno".$contador ?>" id="<?php echo "PreguntaGobierno".$idPregunta ?>">
                         <?php  
                         }elseif($ValTipoPregunta == 'Porcentaje'){
                         ?>
-                        <input type="number" class="validar" placeholder="Agregue el porcentaje" id="<?php echo $contador ?>"
-                            name="<?php echo $contador ?>">
-                        <input class="validar" type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" id="<?php echo "PreguntaAbierta". $contador ?>">    
-                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
+                        <input type="number" class="Gobierno" placeholder="Agregue el porcentaje" id="<?php echo "Gobierno". $contador ?>"
+                            name="<?php echo "Gobierno" .$contador ?>">
+                        <input class="Gobierno" type="hidden" name="<?php echo "PreguntaAbiertaGobierno". $contador ?>" value="Null" id="<?php echo "PreguntaAbiertaGobierno". $contador ?>">    
+                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaGobierno".$contador ?>" id="<?php echo "PreguntaGobierno".$idPregunta ?>">
                         <?php 
                         }else{
                         while ($filaBuscaRespuestas=mysqli_fetch_array($ResRespuestas)){
@@ -61,8 +73,8 @@
                         <option value="<?php echo $filaBuscaRespuestas['Valor']; ?>">
                             <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
                     </select> 
-                    <textarea class="validar form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbierta". $contador ?>" id="<?php echo "PreguntaAbierta". $contador ?>" ></textarea>
-                    <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
+                    <textarea class="Gobierno form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbiertaGobierno". $contador ?>" id="<?php echo "PreguntaAbiertaGobierno". $contador ?>" ></textarea>
+                    <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaGobierno".$contador ?>" id="<?php echo "PreguntaGobierno".$idPregunta ?>">
                     <?php 
                         }
                         ?>
@@ -77,3 +89,6 @@
     
 ?>
 </div>
+
+<?php } ?>
+

@@ -1,3 +1,16 @@
+
+<?php
+
+if($Report6 == 1){
+?>
+<div id="ContGracias">
+    <h1>No hay Preguntas para responder</h1>
+    
+</div>
+<?php
+}else{
+?>
+
 <div id="Calidad" class="tabcontent">
     
     <?php
@@ -19,9 +32,9 @@
         ?>
     <div class="formularioQuestion linearBlue row">
         <div class="col">
-            <div class="titleformul">Pregunta <?php echo $contador?>.</div>
+            <div class="titleformul">PreguntaEstrategia <?php echo $contador?>.</div>
             <div class="questionFrom"><?php echo $fila['pregunta']; ?></div>
-            <div class="request">
+            <div class="request requestEstrategia_de_datos">
                 <?php 
                     $TraerSelect= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                     $ResSelect=  mysqli_query($conn,$TraerSelect);
@@ -30,12 +43,12 @@
                         }
                         if($ValTipoPregunta == 'Select'){
                         ?>
-                <select class="validar" name="<?php echo $contador?>" id="<?php echo $contador?>" required>
+                <select class="Estrategia_de_datos" name="<?php echo "Estrategia". $contador?>" id="<?php echo "Estrategia". $contador?>" required>
                     <option disabled selected value="">Seleccionar</option>
                     <?php    
                         }elseif($ValTipoPregunta == 'MultiSelect'){
                         ?>
-                    <select data-placeholder="Seleccione uno o varios" multiple class="chosen-select " name="<?php echo $contador?>[]"  id="<?php echo $contador ?>">
+                    <select data-placeholder="Seleccione uno o varios" multiple class="chosen-select " name="<?php echo "Estrategia". $contador?>[]"  id="<?php echo "Estrategia". $contador ?>">
                         <option disabled selected value="" required>Seleccione uno o varios</option>
                         <?php    
                         }
@@ -43,16 +56,16 @@
                         $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
                         if($ValTipoPregunta == 'Abierta'){
                         ?>
-                        <textarea class="validar form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo $contador ?>" name="<?php echo $contador ?>" ></textarea>
-                        <input type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" class="validar" id="<?php echo "PreguntaAbierta". $contador ?>">        
-                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
+                        <textarea class="Estrategia_de_datos form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo "Estrategia". $contador ?>" name="<?php echo "Estrategia". $contador ?>" ></textarea>
+                        <input type="hidden" name="<?php echo "PreguntaAbiertaEstrategia". $contador ?>" value="Null" class="Estrategia_de_datos" id="<?php echo "PreguntaAbiertaEstrategia". $contador ?>">        
+                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaEstrategia".$contador ?>" id="<?php echo "PreguntaEstrategia".$idPregunta ?>">
                         <?php  
                         }elseif($ValTipoPregunta == 'Porcentaje'){
                         ?>
-                        <input type="number" class="validar" placeholder="Agregue el porcentaje" id="<?php echo $contador ?>"
-                            name="<?php echo $contador ?>">
-                        <input class="validar" type="hidden" name="<?php echo "PreguntaAbierta". $contador ?>" value="Null" id="<?php echo "PreguntaAbierta". $contador ?>">    
-                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
+                        <input type="number" class="Estrategia_de_datos" placeholder="Agregue el porcentaje" id="<?php echo "Estrategia". $contador ?>"
+                            name="<?php echo "Estrategia". $contador ?>">
+                        <input class="Estrategia_de_datos" type="hidden" name="<?php echo "PreguntaAbiertaEstrategia". $contador ?>" value="Null" id="<?php echo "PreguntaAbiertaEstrategia". $contador ?>">    
+                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaEstrategia".$contador ?>" id="<?php echo "PreguntaEstrategia".$idPregunta ?>">
                         <?php 
                         }else{
                         while ($filaBuscaRespuestas=mysqli_fetch_array($ResRespuestas)){
@@ -61,8 +74,8 @@
                         <option value="<?php echo $filaBuscaRespuestas['Valor']; ?>">
                             <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
                     </select> 
-                    <textarea class="validar form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbierta". $contador ?>" id="<?php echo "PreguntaAbierta". $contador ?>" ></textarea>
-                    <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "Pregunta".$contador ?>" id="<?php echo "Pregunta".$idPregunta ?>">
+                    <textarea class="Estrategia_de_datos form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbiertaEstrategia". $contador ?>" id="<?php echo "PreguntaAbiertaEstrategia". $contador ?>" ></textarea>
+                    <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaEstrategia".$contador ?>" >
                     <?php 
                         }
                         ?>
@@ -77,3 +90,4 @@
     
 ?>
 </div>
+<?php } ?>
