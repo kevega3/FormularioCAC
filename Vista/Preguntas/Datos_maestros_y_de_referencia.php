@@ -35,7 +35,7 @@
                     <?php    
                         }elseif($ValTipoPregunta == 'MultiSelect'){
                         ?>
-                    <select data-placeholder="Seleccione uno o varios" multiple class="chosen-select " name="<?php echo "DatosMaestros" . $contador?>[]"  id="<?php echo "DatosMaestros" . $contador ?>">
+                    <select data-placeholder="Seleccione uno o varios"  multiselect-hide-x="true"  multiple class="chosen-select " name="<?php echo "DatosMaestros" . $contador?>[]"  id="<?php echo "DatosMaestros" . $contador ?>">
                         <option disabled selected value="" required>Seleccione uno o varios</option>
                         <?php    
                         }

@@ -108,7 +108,7 @@ include ('Modelo/Key.php');
                         <div class="formulario__mensaje" id="formulario__mensaje">
                             <p>
                                 <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor
-                                rellena el formulario correctamente.
+                                rellena el formulario.
                             </p>
                         </div>
 
@@ -124,6 +124,7 @@ include ('Modelo/Key.php');
                         <p>© 2022 Todos los derechos reservados a Cuenta de Alto Costo
                             Términos y condiciones . Políticas de privacidad y condiciones de uso.</p>
                     </div>
+
                 </div>
 
                 <div class="col-sm-1 d-md-block col-md-1 vacio"></div>
@@ -187,3 +188,9 @@ include ('Modelo/Key.php');
     </script>
 
 </html>
+
+
+
+
+
+

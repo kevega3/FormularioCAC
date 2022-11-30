@@ -299,3 +299,14 @@ white-space: break-word;
 #ContGracias{
     display: contents;
 }
+
+
+#ContGracias h3{
+    padding: 10px;
+    background: white;
+    border-radius: 17px;
+    -webkit-box-shadow: 0px 0px 5px -1px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px -1px rgb(0 0 0 / 75%);
+    margin: 6px;
+}

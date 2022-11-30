@@ -114,10 +114,10 @@ function CrearToken() {
 				CorreoNotificador: CorreoNotificador,
 				RespuestaRol: RespuestaRol
 			},
-				function (data, status) {
+				function (res) {
 					loader.classList.remove("active");
 
-					if(data = 'Success' || data == 'Success'){
+					if(res = 1 || res == 1 || res === 1){
 					Swal.fire({
 						position: 'center',
 						icon: 'success',
@@ -125,9 +125,24 @@ function CrearToken() {
 						showConfirmButton: false,
 						timer: 1500
 					});
-					setTimeout("window.location='../../Vista/Admin/'", 1500);
+					
+					// setTimeout("window.location='../../Vista/Admin/'", 1500);
+					}else if(res = 3 || res == 3 || res === 3){
+						Swal.fire({
+						position: 'center',
+						icon: 'erorr',
+						title: 'Error en el envio de correo',
+						showConfirmButton: false,
+						timer: 1500
+					});
 					}else{
-						alert("Error llamar al admin");
+						Swal.fire({
+							position: 'center',
+							icon: 'erorr',
+							title: 'Error en la insersion',
+							showConfirmButton: false,
+							timer: 1500
+						});
 					}
 					
 				})

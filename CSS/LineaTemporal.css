@@ -128,8 +128,8 @@ Main Components
     pointer-events: none;
   }
   .cd-horizontal-timeline .events a.selected::after {
-    background-color: #085796;
-    border-color: #085796;
+    background-color: #5d45aa;
+    border-color: #5d45aa;
   }
   @media only screen and (min-width: 1100px) {
     .cd-horizontal-timeline {
@@ -269,6 +269,10 @@ Main Components
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
+  }
+
+  .events-content li.selected h2{
+    padding-left:10px;
   }
    .events-content li.respo {
     /* visible event content */

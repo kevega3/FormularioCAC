@@ -44,7 +44,7 @@
 
 
 
-  <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select" name="Rol[]" required>
+  <select data-placeholder="¿Aquien se le va a preguntar?" multiple  name="Rol[]" required>
     <option disabled selected value="" required>¿Aquien se le va a preguntar?</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -68,8 +68,3 @@
 </form>
 
 
-<script>
-     $(".chosen-select").chosen({
-  no_results_text: "Oops, nothing found!"
-})
-</script>

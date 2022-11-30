@@ -2404,6 +2404,9 @@ progress {
     font-size: 1.25rem;
     border-radius: .3rem
 }
+.multiselect-dropdown{
+    width: 100%;
+}
 
 .form-control-lg::file-selector-button {
     padding: .5rem 1rem;

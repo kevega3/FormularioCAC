@@ -1,25 +1,25 @@
 <div class="container-fluid ">
 
     <div class="tituloConsultasToken">
-        <img src="../../img/simbolo_cac_color.png" alt="" style="width:60px;">
+        <img src="../../IMG/simbolo_cac_color.png" alt="" style="width:60px;">
         <h1>Generar Token</h1>
     </div>
     <br>
 
-    <!-- <button type="button" class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#AgregarToken">
+    <button type="button" class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#AgregarToken" onclick="activeBtn()">
         Agregar <i class="fas fa-user-plus"></i>
-    </button> -->
+    </button>
 
     <!-- Modal -->
-    <!-- <div class="modal fade" id="AgregarToken" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="AgregarToken" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header menu"> -->
-                    <!-- <h5 class="modal-title" id="exampleModalLabel">Generar Token</h5>
+                <div class="modal-header menu">
+                    <h5 class="modal-title" id="exampleModalLabel">Generar Token</h5>
                     <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
-                </div> -->
-                <!-- <div class="modal-body"> -->
+                </div>
+                <div class="modal-body">
                     <form class="formulario" id="formulario">
 
                         <!-- Grupo: NombreEntidad -->
@@ -85,18 +85,18 @@
 
                         <br>
                         <div class="modal-footer">
-                            <!-- <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button> -->
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
 
                             <button type="submit" class="formulario__btn">Crear</button>
                         </div>
                         
                     </form>
-                <!--</div>
+                </div>
 
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 
 
@@ -185,6 +185,4 @@
 <!-- Tabla -->
 </div>
 
-
-<button onclick="clikme()">clikcme</button>
 

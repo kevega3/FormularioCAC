@@ -169,10 +169,10 @@ $mail->SMTPOptions = array(
 );
 $estadoEnvio = $mail->Send(); 
 if($estadoEnvio){
- $EstadoEnvioUsuario = "Exitoso";
+ echo 1;
 
 } else {
-    $EstadoEnvioUsuario = "Error";
+    echo 3;
 }
 
 

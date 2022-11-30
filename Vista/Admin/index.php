@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
-    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+    <!-- <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/> -->
     
     <link rel="stylesheet" href="../../CSS/Admin/styles.css">
     <!-- <link rel="stylesheet" href="../../CSS/Admin/tabs.css"> -->
@@ -25,6 +25,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap"
         rel="stylesheet">
 </head>
+<style>
+  .tiempo{
+    width: 100%;
+  }
+
+</style>
+
+
 <body style="font-family: 'Montserrat', sans-serif;font-weight: bold;">
     </style>
 
@@ -68,11 +76,14 @@
     <!-- Tablas -->
     
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-     $(".chosen-select").chosen({
-        no_results_text: "Oops, nothing found!"
-      })
+
+<script>
+  function activeBtn(){
+    $(".multiselect-dropdown").attr("style", 'width: 100%;');   
+  }
+    
 </script>
+<script src="../../JS/multiselect-dropdown.js"></script>
 </body>
 </html>
 

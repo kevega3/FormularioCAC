@@ -39,9 +39,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
-    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
-
+    
     <link rel="icon" href="../IMG/simbolo_cac_color.png" type="image/x-icon" />
     <!-- letras   -->
     <title>Bienvenido</title>
@@ -287,7 +285,6 @@
 
 
 
-
             <!-- </div> -->
         </div>
 
@@ -334,6 +331,8 @@
     <script src="../JS/LineTiempo.js"></script>
     <script src="../JS/login.js"></script>
     <script src="../JS/btnes.js"></script>
+
+    <script src="../JS/multiselect-dropdown.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
 if($Report4 == 1){
 ?>
 <div id="ContGracias">
-    <h1>No hay Preguntas para responder</h1>
+    <h3>No hay Preguntas para responder</h3>
     
 </div>
 <?php
@@ -49,7 +49,7 @@ if($Report4 == 1){
                     <?php    
                         }elseif($ValTipoPregunta == 'MultiSelect'){
                         ?>
-                    <select data-placeholder="Seleccione uno o varios" multiple class="chosen-select " name="<?php echo "Calidad". $contador?>[]"  id="<?php echo "Calidad". $contador ?>">
+                    <select data-placeholder="Seleccione uno o varios"  multiselect-hide-x="true"  multiple class="chosen-select " name="<?php echo "Calidad". $contador?>[]"  id="<?php echo "Calidad". $contador ?>">
                         <option disabled selected value="" required>Seleccione uno o varios</option>
                         <?php    
                         }
