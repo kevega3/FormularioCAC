@@ -285,9 +285,9 @@ Main Components
     -o-transform: translateX(0);
     transform: translateX(0);
   }
-  .cd-horizontal-timeline .events a.respo {
+  /* .cd-horizontal-timeline .events a.respo {
     pointer-events: none;
-  }
+  } */
   .cd-horizontal-timeline .events a.respo::after {
     background-color: green;
     border-color: green;

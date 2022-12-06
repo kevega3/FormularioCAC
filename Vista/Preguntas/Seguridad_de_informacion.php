@@ -1,5 +1,5 @@
 <div class="ContGracias">  
-    <h3 id="ContGraciasCiberseguridad">
+    <h3 id="ContGraciasSeguridadInfo">
         No hay preguntas
     </h3>
 </div>
@@ -8,8 +8,7 @@
 <div id="Calidad" class="tabcontent">
     
     <?php
-    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idAreaCon = 5' ;
-    $res =  mysqli_query($conn,$TraerPreguntas);
+    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idAreaCon = 10' ;    $res =  mysqli_query($conn,$TraerPreguntas);
     $contador = 0;
     while ($fila=mysqli_fetch_array($res)) { 
         $Rol = $fila['Rol'];
@@ -21,20 +20,20 @@
         $separada = explode($separador, $Rol);
         
 
-        if($Report5 == 1 ){
+        if($Report10 == 1 ){
             break;
         }else{
-
             if(in_array($Rolarray[0], $separada) || in_array($Rolarray[1], $separada) || in_array($Rolarray[2], $separada) || in_array($Rolarray[3], $separada) || in_array($Rolarray[4], $separada) ){
                 $contador++;
-                $prueba5 = 1;
-                echo "<script>pruebita('ContGraciasCiberseguridad');</script>"; 
+$prueba10 = 1;
+echo "<script>pruebita('ContGraciasSeguridadInfo');</script>";
+
             ?>
         <div class="formularioQuestion linearBlue row">
             <div class="col">
                 <div class="titleformul">Pregunta <?php echo $contador?>.</div>
                 <div class="questionFrom"><?php echo $fila['pregunta']; ?></div>
-                <div class="request requestCiberseguridad">
+                <div class="request requestSeguridadInfo">
                     <?php 
                         $TraerSelect= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                         $ResSelect=  mysqli_query($conn,$TraerSelect);
@@ -43,12 +42,12 @@
                             }
                             if($ValTipoPregunta == 'Select'){
                             ?>
-                    <select class="Ciberseguridad" name="<?php echo "Ciber". $contador?>" id="<?php echo "Ciber". $contador?>" required>
+                    <select class="Seguridad_De_info" name="<?php echo "Seguirdadinfo". $contador?>" id="<?php echo "Seguirdadinfo". $contador?>" required>
                         <option disabled selected value="">Seleccionar</option>
                         <?php    
                             }elseif($ValTipoPregunta == 'MultiSelect'){
                             ?>
-                        <select data-placeholder="Seleccione uno o varios"  multiselect-hide-x="true"  multiple class="chosen-select " name="<?php echo "Ciber". $contador?>[]"  id="<?php echo "Ciber". $contador ?>">
+                        <select data-placeholder="Seleccione uno o varios"  multiselect-hide-x="true"  multiple class="chosen-select " name="<?php echo "Seguirdadinfo". $contador?>[]"  id="<?php echo "Seguirdadinfo". $contador ?>">
                             <option disabled selected value="" required>Seleccione uno o varios</option>
                             <?php    
                             }
@@ -56,16 +55,16 @@
                             $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
                             if($ValTipoPregunta == 'Abierta'){
                             ?>
-                            <textarea class="Ciberseguridad form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo "Ciber". $contador ?>" name="<?php echo "Ciber". $contador ?>" ></textarea>
-                            <input type="hidden" name="<?php echo "PreguntaAbiertaCiber". $contador ?>" value="Null" class="Ciberseguridad" id="<?php echo "PreguntaAbiertaCiber". $contador ?>">        
-                            <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaCiber".$contador ?>" id="<?php echo "PreguntaCiber".$idPregunta ?>">
+                            <textarea class="Seguridad_De_info form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo "Seguirdadinfo". $contador ?>" name="<?php echo "Seguirdadinfo". $contador ?>" ></textarea>
+                            <input type="hidden" name="<?php echo "PreguntaAbiertaSeguirdadinfo". $contador ?>" value="Null" class="Seguridad_De_info" id="<?php echo "PreguntaAbiertaSeguirdadinfo". $contador ?>">        
+                            <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaSeguirdadinfo".$contador ?>" id="<?php echo "PreguntaSeguirdadinfo".$idPregunta ?>">
                             <?php  
                             }elseif($ValTipoPregunta == 'Porcentaje'){
                             ?>
-                            <input type="number" class="Ciberseguridad" placeholder="Agregue el porcentaje" id="<?php  echo "Ciber". $contador ?>"
-                                name="<?php echo "Ciber". $contador ?>">
-                            <input class="Ciberseguridad" type="hidden" name="<?php echo "PreguntaAbiertaCiber". $contador ?>" value="Null" id="<?php echo "PreguntaAbiertaCiber". $contador ?>">    
-                            <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaCiber".$contador ?>" id="<?php echo "PreguntaCiber".$idPregunta ?>">
+                            <input type="number" class="Seguridad_De_info" placeholder="Agregue el porcentaje" id="<?php echo "Seguirdadinfo". $contador ?>"
+                                name="<?php echo "Seguirdadinfo". $contador ?>">
+                            <input class="Seguridad_De_info" type="hidden" name="<?php echo "PreguntaAbiertaSeguirdadinfo". $contador ?>" value="Null" id="<?php echo "PreguntaAbiertaSeguirdadinfo". $contador ?>">    
+                            <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaSeguirdadinfo".$contador ?>" id="<?php echo "PreguntaSeguirdadinfo".$idPregunta ?>">
                             <?php 
                             }else{
                             while ($filaBuscaRespuestas=mysqli_fetch_array($ResRespuestas)){
@@ -74,8 +73,8 @@
                             <option value="<?php echo $filaBuscaRespuestas['Valor']; ?>">
                                 <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
                         </select> 
-                        <textarea class="Ciberseguridad form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbiertaCiber". $contador ?>" id="<?php echo "PreguntaAbiertaCiber". $contador ?>" ></textarea>
-                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaCiber".$contador ?>" id="<?php echo "PreguntaCiber".$idPregunta ?>">
+                        <textarea class="Seguridad_De_info form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbiertaSeguirdadinfo". $contador ?>" id="<?php echo "PreguntaAbiertaSeguirdadinfo". $contador ?>" ></textarea>
+                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaSeguirdadinfo".$contador ?>" id="<?php echo "PreguntaSeguirdadinfo".$idPregunta ?>">
                         <?php 
                             }
                             ?>
@@ -88,12 +87,14 @@
         } 
         }
 
+
     }
-    if(empty($prueba5)){
-        $CambiarEstado = "UPDATE `persona` SET `repo5` = '1' WHERE idPersona = '$id'" ;
+    if(empty($prueba10)){
+        $CambiarEstado = "UPDATE `persona` SET `repo10` = '1' WHERE idPersona = '$id'" ;
         $res2 =  mysqli_query($conn,$CambiarEstado);
-        echo "<script>addClasses('btnli5');</script>";
+        echo "<script>addClasses('btnli10');</script>";
     } 
     
 ?>
 </div>
+

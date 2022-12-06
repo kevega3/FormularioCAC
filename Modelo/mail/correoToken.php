@@ -147,7 +147,7 @@ $mail->Body = "<html lang='es'>
         
         </br>
         <center>
-          <a class='boton' href='http://localhost/CUESTIONARIOCAC/' target='_blank'>Ir al cuestionario</a>
+          <a class='boton' href='https://cuentadealtocosto.org/siscac_users/CUESTIONARIOCAC/' target='_blank'>Ir al cuestionario</a>
         </center>
       </div>
       <div class='footer'>
@@ -170,7 +170,6 @@ $mail->SMTPOptions = array(
 $estadoEnvio = $mail->Send(); 
 if($estadoEnvio){
  echo 1;
-
 } else {
     echo 3;
 }

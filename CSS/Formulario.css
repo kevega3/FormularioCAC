@@ -296,12 +296,12 @@ white-space: break-word;
     position: relative;
 }
 
-#ContGracias{
+.ContGracias{
     display: contents;
 }
 
 
-#ContGracias h3{
+.ContGracias h3{
     padding: 10px;
     background: white;
     border-radius: 17px;

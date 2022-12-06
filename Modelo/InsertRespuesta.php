@@ -12,7 +12,7 @@ $fecha = date('j-n-Y'). " " .date('g:i:s A');
     if((!$res= mysqli_query($conn,$insert))){
         echo 3;
     }else{
-        $actualizarPersona ="UPDATE `persona` SET `$Actualizar` = '1' WHERE `persona`.`idPersona` = 1";
+        $actualizarPersona ="UPDATE `persona` SET `$Actualizar` = '1' WHERE `persona`.`idPersona` = $idPersona";
         if((!$res= mysqli_query($conn,$actualizarPersona))){
             echo 2;
         }else{

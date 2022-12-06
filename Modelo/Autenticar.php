@@ -43,7 +43,8 @@ if ($varsesion == null || ($varsesion = '' || mysqli_num_rows($res)==0)) {
         $Report15 = $fila['repo15']; 
         $Report16 = $fila['repo16']; 
         $Report17 = $fila['repo17']; 
-        $Report18 = $fila['repo18']; 
+        $Report18 = $fila['repo18'];
+         
         $Rolarray = explode(",", $RolPersona);
         for ($i=0;$i<count($Rolarray);$i++){     
             $Rolarray[$i];    

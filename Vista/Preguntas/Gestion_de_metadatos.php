@@ -1,5 +1,6 @@
+
 <div class="ContGracias">  
-    <h3 id="ContGraciasCiberseguridad">
+    <h3 id="ContGraciasGestionMetadatos">
         No hay preguntas
     </h3>
 </div>
@@ -8,7 +9,7 @@
 <div id="Calidad" class="tabcontent">
     
     <?php
-    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idAreaCon = 5' ;
+    $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idAreaCon = 18' ;
     $res =  mysqli_query($conn,$TraerPreguntas);
     $contador = 0;
     while ($fila=mysqli_fetch_array($res)) { 
@@ -20,21 +21,19 @@
         $idPregunta = $fila['idPregunta'];
         $separada = explode($separador, $Rol);
         
-
-        if($Report5 == 1 ){
+        if($Report18 == 1 ){
             break;
         }else{
-
             if(in_array($Rolarray[0], $separada) || in_array($Rolarray[1], $separada) || in_array($Rolarray[2], $separada) || in_array($Rolarray[3], $separada) || in_array($Rolarray[4], $separada) ){
                 $contador++;
-                $prueba5 = 1;
-                echo "<script>pruebita('ContGraciasCiberseguridad');</script>"; 
+                $prueba18 = 1;
+echo "<script>pruebita('ContGraciasGestionMetadatos');</script>"; 
             ?>
         <div class="formularioQuestion linearBlue row">
             <div class="col">
                 <div class="titleformul">Pregunta <?php echo $contador?>.</div>
                 <div class="questionFrom"><?php echo $fila['pregunta']; ?></div>
-                <div class="request requestCiberseguridad">
+                <div class="request requestGestionMetadaDAtos">
                     <?php 
                         $TraerSelect= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                         $ResSelect=  mysqli_query($conn,$TraerSelect);
@@ -43,12 +42,12 @@
                             }
                             if($ValTipoPregunta == 'Select'){
                             ?>
-                    <select class="Ciberseguridad" name="<?php echo "Ciber". $contador?>" id="<?php echo "Ciber". $contador?>" required>
+                    <select class="Gestión_metadatos" name="<?php echo "GestionMetadatoss". $contador?>" id="<?php echo "GestionMetadatoss". $contador?>" required>
                         <option disabled selected value="">Seleccionar</option>
                         <?php    
                             }elseif($ValTipoPregunta == 'MultiSelect'){
                             ?>
-                        <select data-placeholder="Seleccione uno o varios"  multiselect-hide-x="true"  multiple class="chosen-select " name="<?php echo "Ciber". $contador?>[]"  id="<?php echo "Ciber". $contador ?>">
+                        <select data-placeholder="Seleccione uno o varios"  multiselect-hide-x="true"  multiple class="chosen-select " name="<?php echo "GestionMetadatoss". $contador?>[]"  id="<?php echo "GestionMetadatoss". $contador ?>">
                             <option disabled selected value="" required>Seleccione uno o varios</option>
                             <?php    
                             }
@@ -56,16 +55,16 @@
                             $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
                             if($ValTipoPregunta == 'Abierta'){
                             ?>
-                            <textarea class="Ciberseguridad form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo "Ciber". $contador ?>" name="<?php echo "Ciber". $contador ?>" ></textarea>
-                            <input type="hidden" name="<?php echo "PreguntaAbiertaCiber". $contador ?>" value="Null" class="Ciberseguridad" id="<?php echo "PreguntaAbiertaCiber". $contador ?>">        
-                            <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaCiber".$contador ?>" id="<?php echo "PreguntaCiber".$idPregunta ?>">
+                            <textarea class="Gestión_metadatos form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo "GestionMetadatoss". $contador ?>" name="<?php echo "GestionMetadatoss". $contador ?>" ></textarea>
+                            <input type="hidden" name="<?php echo "PreguntaAbiertaGestionMetadatoss". $contador ?>" value="Null" class="Gestión_metadatos" id="<?php echo "PreguntaAbiertaGestionMetadatoss". $contador ?>">        
+                            <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaGestionMetadatoss".$contador ?>" id="<?php echo "PreguntaGestionMetadatoss".$idPregunta ?>">
                             <?php  
                             }elseif($ValTipoPregunta == 'Porcentaje'){
                             ?>
-                            <input type="number" class="Ciberseguridad" placeholder="Agregue el porcentaje" id="<?php  echo "Ciber". $contador ?>"
-                                name="<?php echo "Ciber". $contador ?>">
-                            <input class="Ciberseguridad" type="hidden" name="<?php echo "PreguntaAbiertaCiber". $contador ?>" value="Null" id="<?php echo "PreguntaAbiertaCiber". $contador ?>">    
-                            <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaCiber".$contador ?>" id="<?php echo "PreguntaCiber".$idPregunta ?>">
+                            <input type="number" class="Gestión_metadatos" placeholder="Agregue el porcentaje" id="<?php echo "GestionMetadatoss". $contador ?>"
+                                name="<?php echo "GestionMetadatoss". $contador ?>">
+                            <input class="Gestión_metadatos" type="hidden" name="<?php echo "PreguntaAbiertaGestionMetadatoss". $contador ?>" value="Null" id="<?php echo "PreguntaAbiertaGestionMetadatoss". $contador ?>">    
+                            <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaGestionMetadatoss".$contador ?>" id="<?php echo "PreguntaGestionMetadatoss".$idPregunta ?>">
                             <?php 
                             }else{
                             while ($filaBuscaRespuestas=mysqli_fetch_array($ResRespuestas)){
@@ -74,8 +73,8 @@
                             <option value="<?php echo $filaBuscaRespuestas['Valor']; ?>">
                                 <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
                         </select> 
-                        <textarea class="Ciberseguridad form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbiertaCiber". $contador ?>" id="<?php echo "PreguntaAbiertaCiber". $contador ?>" ></textarea>
-                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaCiber".$contador ?>" id="<?php echo "PreguntaCiber".$idPregunta ?>">
+                        <textarea class="Gestión_metadatos form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbiertaGestionMetadatoss". $contador ?>" id="<?php echo "PreguntaAbiertaGestionMetadatoss". $contador ?>" ></textarea>
+                        <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaGestionMetadatoss".$contador ?>" id="<?php echo "PreguntaGestionMetadatoss".$idPregunta ?>">
                         <?php 
                             }
                             ?>
@@ -85,14 +84,14 @@
             </div>
         </div>
         <?php 
-        } 
+        }  
         }
-
+        
     }
-    if(empty($prueba5)){
-        $CambiarEstado = "UPDATE `persona` SET `repo5` = '1' WHERE idPersona = '$id'" ;
+    if(empty($prueba18)){
+        $CambiarEstado = "UPDATE `persona` SET `repo18` = '1' WHERE idPersona = '$id'" ;
         $res2 =  mysqli_query($conn,$CambiarEstado);
-        echo "<script>addClasses('btnli5');</script>";
+        echo "<script>addClasses('btnli18');</script>";
     } 
     
 ?>
