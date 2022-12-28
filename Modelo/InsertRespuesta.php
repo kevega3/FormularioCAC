@@ -1,10 +1,19 @@
 <?php 
 include ('Conexion.php');
-$idPersona = $_POST['idPersona']; 
-$idPregunta = $_POST['Pregunta']; 
-$Respuesta =  $_POST['Respuesta'];
-$Actualizar =  $_POST['Actualizar'];
-$RespuestaAbierta=  $_POST['RespuestaAbierta'];
+$idPersonaSUC=filter_var($_POST['idPersona'], FILTER_SANITIZE_STRING);
+$idPersona = preg_replace('/[@\.\;\"\´  ]+/','',$idPersonaSUC);
+
+$idPreguntaSUC=filter_var($_POST['Pregunta'], FILTER_SANITIZE_STRING);
+$idPregunta = preg_replace('/[@\.\;\"\´  ]+/','',$idPreguntaSUC);
+
+$RespuestaSUC=filter_var($_POST['Respuesta'], FILTER_SANITIZE_STRING);
+$Respuesta = preg_replace('/[@\.\;\"\´  ]+/','',$RespuestaSUC);
+
+$ActualizarSUC=filter_var($_POST['Actualizar'], FILTER_SANITIZE_STRING);
+$Actualizar = preg_replace('/[@\.\;\"\´  ]+/','',$ActualizarSUC);
+
+$RespuestaAbiertaSUC=filter_var($_POST['RespuestaAbierta'], FILTER_SANITIZE_STRING);
+$RespuestaAbierta = preg_replace('/[@\.\;\"\´  ]+/','',$RespuestaAbiertaSUC);
 
 date_default_timezone_set('America/Bogota'); 
 $fecha = date('j-n-Y'). " " .date('g:i:s A');

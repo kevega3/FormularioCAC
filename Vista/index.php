@@ -162,28 +162,7 @@
 
 
 
-            <section class="formularioFeedBack row" id="feedBack">
-                <div class="linear"></div>
-
-                <div class="feedBack">
-                    <h4><b>INTRODUCCIÓN</b> </h4>
-                    <p>
-                        Bienvenidos al ejercicio de valoración general de madurez en gestión y gobierno de datos en las
-                        entidades del sector salud, la participación de su entidad es fundamental.
-                    </p>
-                    <span>
-                        Recomendaciones para completar este formulario con éxito
-                    </span>
-                    <li>Contestar todas las preguntas.</li>
-                    <li>Justifique su repuesta, cada pregunta tiene un apartado de campo abierto para que explique al
-                        detalle su respuesta.</li>
-                    <li>Cuando haya contestado cada una de las preguntas puede terminar su cuestionario dándole click al
-                        botón enviar.</li>
-                    </p>
-
-                </div>
-            </section>
-
+            
 
 
 
@@ -191,7 +170,13 @@
             <div class="events-content">
                 <input type="hidden" name="Person" id="Person" value="<?php echo $id?>">
                 <ol style="padding: 0; margin: 0;">
-                    <li class="selected" data-date="01/01/2005">
+                    
+                    <li  data-date="01/01/2000">
+                        <h2>INTRODUCCIÓN - FEEDBACK</h2>
+                        <?php include ('Preguntas/INTRODUCCION.php'); ?>
+                    </li>
+
+                    <li  data-date="01/01/2005">
                         <h2>Area Conocimiento - Almacenamiento</h2>
                         <?php include ('Preguntas/Alacenamiento.php'); ?>
                     </li>
@@ -301,9 +286,9 @@
         <footer>
             <div class="fooder">
                 <p>
-                    © 2022 Todos los derechos reservados a Cuenta de Alto Costo
+                    © 2023 Todos los derechos reservados a Cuenta de Alto Costo
                 </p>
-                <a href="#feedBack" id="redirect" style="color: transparent;">feedBack</a>
+            
             </div>
         </footer>
 
@@ -329,6 +314,8 @@
     <script src="../JS/LineTiempo.js"></script>
     <script src="../JS/login.js"></script>
     <script src="../JS/btnes.js"></script>
+    <script src="../JS/video.js"></script>
+
 
     <script src="../JS/multiselect-dropdown.js"></script>
 </body>

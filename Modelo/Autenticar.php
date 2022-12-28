@@ -21,6 +21,7 @@ if ($varsesion == null || ($varsesion = '' || mysqli_num_rows($res)==0)) {
     $varQuery2 = "SELECT * FROM persona WHERE idPersona =  '$id'";
     $res =  mysqli_query($conn,$varQuery2);
     while ($fila=mysqli_fetch_array($res)) {
+        $Intro = $fila['introVideo']; 
         $RolPersona=$fila['idRol']; 
         $Report1 = $fila['repo1']; 
         $Report2 = $fila['repo2']; 

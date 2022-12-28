@@ -1,7 +1,7 @@
 <?php 
 $mensaje = "prueba";
 $destinatario = $CorreoNotificador;
-// $destinatario = 'kvega@cuentadealtocosto.org';
+//$destinatario = 'kvega@cuentadealtocosto.org';
 
 //$destinatario2 = "medioscac@cuentadealtocosto.org";
 // Datos de la cuenta de correo utilizada para enviar v�a SMTP
@@ -169,7 +169,7 @@ $mail->SMTPOptions = array(
 );
 $estadoEnvio = $mail->Send(); 
 if($estadoEnvio){
- echo 1;
+ echo $insert;
 } else {
     echo 3;
 }

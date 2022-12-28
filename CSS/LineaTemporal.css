@@ -168,8 +168,8 @@ Main Components
     transition: border-color 0.3s;
   }
   .cd-timeline-navigation a:hover {
-    border: 2px solid #005695;
-    color: #005695;
+    border: 2px solid #5d45aa;
+    color: #5d45aa;
   }
   
   .cd-timeline-navigation a.prev::before {
@@ -203,7 +203,7 @@ Main Components
   }
   
   .cd-timeline-navigation a:hover:before {
-    color: #005695;
+    color: #FFFFFF;
   }
   
   
@@ -285,12 +285,16 @@ Main Components
     -o-transform: translateX(0);
     transform: translateX(0);
   }
-  /* .cd-horizontal-timeline .events a.respo {
+  .cd-horizontal-timeline .events a.respo {
     pointer-events: none;
-  } */
+  }
   .cd-horizontal-timeline .events a.respo::after {
     background-color: green;
     border-color: green;
+  }
+  .cd-horizontal-timeline .events a.respoIntro::after {
+    background-color: #5D45AA;
+    border-color: #5D45AA;
   }
   .events-content li.enter-right,  .events-content li.leave-right {
     -webkit-animation-name: cd-enter-right;

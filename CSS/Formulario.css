@@ -17,6 +17,7 @@
 }
 .containerImgIcono h5{
     padding: inherit;
+    font-weight: bold;
 }
 .ContenedorFormulario{
     background: #e6e3f0;
@@ -84,25 +85,14 @@
 
 
 
-.formularioFeedBack{
-    background: white;
-    height: auto;
-    width: 64%;
-    margin: 10px;
-    border-radius: 10px;
-    position: relative;
-    -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
-white-space: break-word;
-}
 
 .linear{
     background: #5d45aa;
     height: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
+    /* margin-left: 7px;
+    margin-right: 4px; */
 }
 
 .feedBack h4{
@@ -189,6 +179,20 @@ white-space: break-word;
 }
 
 
+.formularioIntro{
+    background: white;
+    height: auto;
+    width: 99%;
+    margin: 0px 0px 40px 7px;
+    border-radius: 10px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+    white-space: break-word;
+    padding-bottom: 25px;
+}
+
 
 .formularioQuestion{
     background: white;
@@ -253,9 +257,6 @@ white-space: break-word;
 }
 
 .containerDom{
-    /* background: black; */
-    /* height: 10px; */
-    /* width: 10px; */
     position: fixed;
     right: 1vh;
     top: 0vh;
@@ -267,11 +268,7 @@ white-space: break-word;
     color: red;
 }
 
-.feedBack span{
-    color: #0b1d66;
-    font-size: 20px;
 
-}
 
 .formularioQuestion h5{
     margin-top: 0px;

@@ -3,6 +3,26 @@
 		<div class="events-wrapper">
 			<div class="events">
 				<ol>
+				
+					
+					<?php 
+					
+					if($Intro == 1 || $Intro == '1' ){
+					?>
+						<li onclick="deleteall()"><a id="INTRODUCCION" class="respoIntro" href="#0" data-date="01/01/2000" >INTRODUCCION</a></li>	
+					<?php  
+						}else{
+					?>
+					<li onclick="deleteall()"><a id="INTRODUCCION"  href="#0" data-date="01/01/2000" >INTRODUCCION</a></li>	
+					<?php 
+						}
+					?>
+
+
+
+
+
+
 					<?php 
 					
 						if($Report1 == 1 || $Report1 == '1' ){
@@ -257,7 +277,7 @@
 		</div> <!-- .events-wrapper -->
 
 		<ul class="cd-timeline-navigation">
-			<li><a href="#0" class="prev">goaksdsa</a></li>
+			<li><a href="#0" class="prev">Back</a></li>
 			<li><a href="#0" class="next">Next</a></li>
 		</ul> <!-- .cd-timeline-navigation -->
 	</div> <!-- .timeline -->

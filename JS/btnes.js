@@ -19,17 +19,13 @@ var btn13 = document.getElementById("btn13");
 var btn14 = document.getElementById("btn14");
 var btn15 = document.getElementById("btn15");
 var btn16 = document.getElementById("btn16");
-var feedBack = document.getElementById("feedBack");
-
 var btn17 = document.getElementById("btn17");
 var btn18 = document.getElementById("btn18");
 
 
-
-
 function ActivarIntro() {
-    feedBack.classList.remove("Remove");
-    feedBack.classList.add("NoRemove");
+    // feedBack.classList.remove("Remove");
+    // feedBack.classList.add("NoRemove");
     deleteall();
     btn1.classList.remove("Remove");
     btn1.classList.add("NoRemove");
@@ -39,9 +35,6 @@ function ActivarIntro() {
 
 
 function RemoveIntro1() {
-
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
     deleteall();
     btn2.classList.add("NoRemove");
     btn2.classList.remove("Remove");
@@ -49,9 +42,6 @@ function RemoveIntro1() {
 }
 
 function RemoveIntro2() {
-
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
     deleteall();
     btn3.classList.add("NoRemove");
     btn3.classList.remove("Remove");
@@ -59,17 +49,12 @@ function RemoveIntro2() {
 
 function RemoveIntro3() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
     deleteall();
     btn4.classList.add("NoRemove");
     btn4.classList.remove("Remove");
 }
 
 function RemoveIntro4() {
-
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
     deleteall();
     btn5.classList.add("NoRemove");
     btn5.classList.remove("Remove");
@@ -77,8 +62,7 @@ function RemoveIntro4() {
 
 function RemoveIntro5() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn6.classList.add("NoRemove");
     btn6.classList.remove("Remove");
@@ -86,8 +70,7 @@ function RemoveIntro5() {
 
 function RemoveIntro6() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn7.classList.add("NoRemove");
     btn7.classList.remove("Remove");
@@ -95,8 +78,7 @@ function RemoveIntro6() {
 
 function RemoveIntro7() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn8.classList.add("NoRemove");
     btn8.classList.remove("Remove");
@@ -104,8 +86,7 @@ function RemoveIntro7() {
 
 function RemoveIntro8() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn9.classList.add("NoRemove");
     btn9.classList.remove("Remove");
@@ -113,8 +94,7 @@ function RemoveIntro8() {
 
 function RemoveIntro9() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn10.classList.add("NoRemove");
     btn10.classList.remove("Remove");
@@ -122,16 +102,14 @@ function RemoveIntro9() {
 
 function RemoveIntro10() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn11.classList.add("NoRemove");
     btn11.classList.remove("Remove");
 }
 function RemoveIntro11() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn12.classList.add("NoRemove");
     btn12.classList.remove("Remove");
@@ -139,8 +117,7 @@ function RemoveIntro11() {
 
 function RemoveIntro12() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn13.classList.add("NoRemove");
     btn13.classList.remove("Remove");
@@ -148,8 +125,7 @@ function RemoveIntro12() {
 
 function RemoveIntro13() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn14.classList.add("NoRemove");
     btn14.classList.remove("Remove");
@@ -157,8 +133,7 @@ function RemoveIntro13() {
 
 function RemoveIntro14() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn15.classList.add("NoRemove");
     btn15.classList.remove("Remove");
@@ -166,8 +141,7 @@ function RemoveIntro14() {
 
 function RemoveIntro15() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn16.classList.add("NoRemove");
     btn16.classList.remove("Remove");
@@ -176,8 +150,7 @@ function RemoveIntro15() {
 
 function RemoveIntro16() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn17.classList.add("NoRemove");
     btn17.classList.remove("Remove");
@@ -186,8 +159,7 @@ function RemoveIntro16() {
 
 function RemoveIntro17() {
 
-    feedBack.classList.add("Remove");
-    feedBack.classList.remove("NoRemove");
+    
     deleteall();
     btn18.classList.add("NoRemove");
     btn18.classList.remove("Remove");

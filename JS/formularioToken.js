@@ -126,7 +126,7 @@ function CrearToken() {
 						timer: 1500
 					});
 					
-					// setTimeout("window.location='../../Vista/Admin/'", 1500);
+					setTimeout("window.location='../../Vista/Admin/'", 1500);
 					}else if(res = 3 || res == 3 || res === 3){
 						Swal.fire({
 						position: 'center',
@@ -144,7 +144,6 @@ function CrearToken() {
 							timer: 1500
 						});
 					}
-					
 				})
 
 		}

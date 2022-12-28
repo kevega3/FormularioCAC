@@ -43,7 +43,7 @@ echo "<script>pruebita('ContGraciasDatosMaestrosReferencias');</script>";
                             }
                             if($ValTipoPregunta == 'Select'){
                             ?>
-                    <select class="Almacenamiento_operaciones" name="<?php echo "DatosMaestros" . $contador?>" id="<?php echo "DatosMaestros" . $contador?>" required>
+                    <select class="Datos_MaestrosRefe" name="<?php echo "DatosMaestros" . $contador?>" id="<?php echo "DatosMaestros" . $contador?>" required>
                         <option disabled selected value="">Seleccionar</option>
                         <?php    
                             }elseif($ValTipoPregunta == 'MultiSelect'){
@@ -56,15 +56,15 @@ echo "<script>pruebita('ContGraciasDatosMaestrosReferencias');</script>";
                             $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);
                             if($ValTipoPregunta == 'Abierta'){
                             ?>
-                            <textarea class="Almacenamiento_operaciones form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo "DatosMaestros" . $contador ?>" name="<?php echo "DatosMaestros" .  $contador ?>" ></textarea>
-                            <input type="hidden" name="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>" value="Null" class="Almacenamiento_operaciones" id="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>">        
+                            <textarea class="Datos_MaestrosRefe form-control" placeholder="Si/No Justifique su respuesta" style="height: 100px" id="<?php echo "DatosMaestros" . $contador ?>" name="<?php echo "DatosMaestros" .  $contador ?>" ></textarea>
+                            <input type="hidden" name="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>" value="Null" class="Datos_MaestrosRefe" id="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>">        
                             <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaDatosMaestros".$contador ?>" id="<?php echo "PreguntaDatosMaestros".$idPregunta ?>">
                             <?php  
                             }elseif($ValTipoPregunta == 'Porcentaje'){
                             ?>
-                            <input type="number" class="Almacenamiento_operaciones" placeholder="Agregue el porcentaje" id="<?php echo "DatosMaestros" . $contador ?>"
+                            <input type="number" class="Datos_MaestrosRefe" placeholder="Agregue el porcentaje" id="<?php echo "DatosMaestros" . $contador ?>"
                                 name="<?php echo "DatosMaestros" . $contador ?>">
-                            <input class="Almacenamiento_operaciones" type="hidden" name="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>" value="Null" id="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>">    
+                            <input class="Datos_MaestrosRefe" type="hidden" name="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>" value="Null" id="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>">    
                             <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaDatosMaestros".$contador ?>" id="<?php echo "PreguntaDatosMaestros".$idPregunta ?>">
                             <?php 
                             }else{
@@ -74,7 +74,7 @@ echo "<script>pruebita('ContGraciasDatosMaestrosReferencias');</script>";
                             <option value="<?php echo $filaBuscaRespuestas['Valor']; ?>">
                                 <?php echo $filaBuscaRespuestas['Respuesta']; }?></option>
                         </select> 
-                        <textarea class="Almacenamiento_operaciones form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>" id="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>" ></textarea>
+                        <textarea class="Datos_MaestrosRefe form-control" placeholder="Justifique su respuesta" style="height: 100px" name="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>" id="<?php echo "PreguntaAbiertaDatosMaestros". $contador ?>" ></textarea>
                         <input type="hidden" value="<?php echo $idPregunta?>" id="<?php echo "PreguntaDatosMaestros".$contador ?>" id="<?php echo "PreguntaDatosMaestros".$idPregunta ?>">
                         <?php 
                             }
