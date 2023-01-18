@@ -14,7 +14,6 @@
             <div id="carga"></div>
     </div>   
 </body>
- 
 
 <script>
     window.onload = function() {
@@ -314,7 +313,7 @@
     <script src="../JS/LineTiempo.js"></script>
     <script src="../JS/login.js"></script>
     <script src="../JS/btnes.js"></script>
-    <script src="../JS/video.js"></script>
+    <script src="../JS/Video.js"></script>
 
 
     <script src="../JS/multiselect-dropdown.js"></script>
@@ -323,3 +322,5 @@
 </html>
 
 <?php     }?>
+
+

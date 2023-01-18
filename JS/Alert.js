@@ -1,20 +1,23 @@
+
 window.onload = function () {
   var LineaIntro = document.getElementById('INTRODUCCION').classList;
+  if (LineaIntro.toString().includes('respoIntro')) {
   for (i = 1; i < 19; i++) {
     var btn = 'btnli' + i;
     var linea = document.getElementById(btn).classList;
-    if (LineaIntro.toString().includes('respoIntro')) {
       if (linea.toString().includes('respo')) {
       }
       else {
-
         document.getElementById(btn).click();
         break;
       }
-    } else {
-        var LineaIntro =  document.getElementById('INTRODUCCION');
-        break;
-    }
+        
+      }
+    
+
+  } else {
+
+    document.getElementById('INTRODUCCION').click();
 
   }
 }

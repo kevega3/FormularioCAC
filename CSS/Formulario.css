@@ -40,44 +40,74 @@
     position: relative;
     
 }
-.paralelogramo {
-    width: auto; 
-    height: auto; 
-    padding-right: 2%;
-    padding-left: 2%;
-    border: 3px solid rgb(255, 255, 255); 
-    background: #FFFFFF;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    -ms-transform: skew(20deg);
-    -o-transform: skew(20deg);
-    transform: skew(-20deg);
-    position: absolute;
-    top: 20%;
-    bottom: 20%;
-    left: 100px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
 
 .paralelogramo p{
     font-size: 9vh;
     color: #5d45aa;
     font-weight: bold;
 }
-
-.TituloCAC{
-    height: 100%;
-    color: white;    
-    text-align: center;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    overflow-wrap: break-word;
-    position: absolute;
+@media only screen and (min-width: 0px) and (max-width: 1123px) {
+	.TituloCAC{
+        display: none;
+    }
+    .paralelogramo {
+        width: auto; 
+        height: auto; 
+        padding-right: 20%;
+        padding-left: 20%;
+        border: 3px solid rgb(255, 255, 255); 
+        background: #FFFFFF;
+        -webkit-transform: skew(20deg);
+        -moz-transform: skew(20deg);
+        -ms-transform: skew(20deg);
+        -o-transform: skew(20deg);
+        transform: skew(-20deg);
+        position: absolute;
+        top: 20%;
+        bottom: 20%;
+        left: 100px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
+@media only screen and (min-width: 1123px) and (max-width: 10000px) {
+    .TituloCAC{
+        height: 100%;
+        color: white;    
+        text-align: center;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        overflow-wrap: break-word;
+        position: absolute;
+    }
+    .paralelogramo {
+        width: auto; 
+        height: auto; 
+        padding-right: 2%;
+        padding-left: 2%;
+        border: 3px solid rgb(255, 255, 255); 
+        background: #FFFFFF;
+        -webkit-transform: skew(20deg);
+        -moz-transform: skew(20deg);
+        -ms-transform: skew(20deg);
+        -o-transform: skew(20deg);
+        transform: skew(-20deg);
+        position: absolute;
+        top: 20%;
+        bottom: 20%;
+        left: 100px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
 .Nomnbre{
     font-size: 6vh;
     font-style: italic;

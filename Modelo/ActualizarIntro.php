@@ -10,13 +10,6 @@ $Person = $_POST['Person'];
         echo 1;
     }
 
-
-
-
-
-
-
-
 ?>
 
 

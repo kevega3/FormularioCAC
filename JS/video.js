@@ -1,5 +1,7 @@
 var vid = document.getElementById("VideoIntro");
 
+var introduccion = document.getElementById("INTRODUCCION");
+
 vid.onplay = function(){
     var Person = $("#Person").val();
     $.post("../Modelo/ActualizarIntro.php", {
@@ -7,9 +9,9 @@ vid.onplay = function(){
       },
         function (res) {
           if (res = 1) {
-            console.log('Se visualiza video');
+            introduccion.classList.add("respoIntro");
           } else {
-            alert('No Actualizado');
+            alert('Error, Porfavor contactar con el admin');
           }
         })
 }
