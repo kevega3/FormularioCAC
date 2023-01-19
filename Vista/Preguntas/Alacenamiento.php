@@ -49,9 +49,9 @@
                             ?>
                     <select data-placeholder="Seleccione uno o varios" multiselect-hide-x="true" multiple
                         class="chosen-select " name="<?php echo "Alamace". $contador?>[]"
-                        id="<?php echo "Alamace". $contador ?>">
+                        id="<?php echo "Alamace". $contador ?>" tyle="color:black;" >
                         <!-- <select  multiple onchange="console.log(Array.from(this.selectedOptions).map(x=>x.value??x.text))" multiselect-hide-x="true"> -->
-                        <option disabled selected value="" required>Seleccione uno o varios</option>
+                        
                         <?php    
                             }
                             $TraerRespuestas= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 

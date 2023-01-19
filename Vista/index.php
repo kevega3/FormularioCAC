@@ -8,20 +8,21 @@
 <link rel="stylesheet" href="../CSS/Reload.css">
 <link rel="icon" href="../IMG/simbolo_cac_color.png" type="image/x-icon" />
 <title>Bienvenido</title>
+
 <body style="padding: 0; margin:0;">
-<input type="hidden" value="<?php echo $id ?>" id="idPersona">
+    <input type="hidden" value="<?php echo $id ?>" id="idPersona">
     <div class="" id="contenedor_carga">
-            <div id="carga"></div>
-    </div>   
+        <div id="carga"></div>
+    </div>
 </body>
 
 <script>
-    window.onload = function() {
-        var contenedor = document.getElementById('contenedor_carga');
-        contenedor.style.visibility = 'hidden';
-        contenedor.style.opacity = '0';
-    }
-    </script>
+window.onload = function() {
+    var contenedor = document.getElementById('contenedor_carga');
+    contenedor.style.visibility = 'hidden';
+    contenedor.style.opacity = '0';
+}
+</script>
 <script src="../JS/Final.js"></script>
 <?php    
     }else{
@@ -44,7 +45,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    
+
     <link rel="icon" href="../IMG/simbolo_cac_color.png" type="image/x-icon" />
     <!-- letras   -->
     <title>Bienvenido</title>
@@ -52,7 +53,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap"
         rel="stylesheet">
-    <script src="../JS/Textos.js"></script>    
+    <script src="../JS/Textos.js"></script>
     <!-- letras -->
 </head>
 
@@ -161,7 +162,7 @@
 
 
 
-            
+
 
 
 
@@ -169,13 +170,13 @@
             <div class="events-content">
                 <input type="hidden" name="Person" id="Person" value="<?php echo $id?>">
                 <ol style="padding: 0; margin: 0;">
-                    
-                    <li  data-date="01/01/2000">
+
+                    <li data-date="01/01/2000">
                         <h2>INTRODUCCIÓN - FEEDBACK</h2>
                         <?php include ('Preguntas/INTRODUCCION.php'); ?>
                     </li>
 
-                    <li  data-date="01/01/2005">
+                    <li data-date="01/01/2005">
                         <h2>Area Conocimiento - Almacenamiento</h2>
                         <?php include ('Preguntas/Alacenamiento.php'); ?>
                     </li>
@@ -287,7 +288,7 @@
                 <p>
                     © 2023 Todos los derechos reservados a Cuenta de Alto Costo
                 </p>
-            
+
             </div>
         </footer>
 
@@ -296,11 +297,11 @@
         <!-- container-fluid -->
     </div>
 
-    
 
-    
 
-   
+
+
+
 
 
     <script src="https://kit.fontawesome.com/c4cc899971.js" crossorigin="anonymous"></script>
@@ -322,5 +323,3 @@
 </html>
 
 <?php     }?>
-
-

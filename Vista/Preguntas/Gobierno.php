@@ -6,7 +6,6 @@
 
 
 <div id="Calidad" class="tabcontent">
-
     <?php
     $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idAreaCon = 8' ;
     $res =  mysqli_query($conn,$TraerPreguntas);
@@ -52,8 +51,7 @@
                     <select data-placeholder="Seleccione uno o varios" multiselect-hide-x="true" multiple
                         class="chosen-select " name="<?php echo "Gobierno". $contador?>[]"
                         id="<?php echo "Gobierno" .$contador ?>">
-                        <option disabled selected value="" required>Seleccione uno o varios</option>
-                        <?php    
+                                                <?php    
                 }
                 $TraerRespuestas= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                 $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);

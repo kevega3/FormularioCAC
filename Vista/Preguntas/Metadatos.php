@@ -50,8 +50,7 @@
                     <select data-placeholder="Seleccione uno o varios" multiselect-hide-x="true" multiple
                         class="chosen-select " name="<?php echo "Metadatos". $contador?>[]"
                         id="<?php echo "Metadatos". $contador ?>">
-                        <option disabled selected value="" required>Seleccione uno o varios</option>
-                        <?php    
+                                                <?php    
                             }
                             $TraerRespuestas= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                             $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);

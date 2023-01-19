@@ -1,11 +1,14 @@
 <?php
-
-
-
 $servername = "localhost";
 $username = "root";
 $password = "";
+
+
+// $password = "z#wc4C2o18*";
+// $username = "altocost_wp";
+
 $dbname = "cuestionariocac";
+
 
 
 $conn = new mysqli("$servername","$username","$password","$dbname");

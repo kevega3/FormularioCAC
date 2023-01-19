@@ -16,12 +16,9 @@ body{
 	.LogoImgen{
 		width: 80vw;
 	}
-
-	
 }
 @media screen and (min-width:980px){
 	.imagen{
-
 	background-image: url(../IMG/beautiful-asian-woman-uses-smartphone-app-sends-messages-in-social-media-chat-points-away-on-copy-space-wears-casual-jumper.jpg);
 	background-repeat:no-repeat;
 	background-size: 100%;
@@ -358,36 +355,39 @@ padding: 4% 0px 4% 0px;
 }
 .reporteBI{
 	width: 95%;
-	
 }
 @media screen and (min-width:370px){
 	.reporteBI{
 	width: 95%;
 	height: 500px
+	}
 }
 @media screen and (min-width:540px){
 	.reporteBI{
 	width: 95%;
 	height: 450px
+	}
 }
 
 @media screen and (min-width:720px){
 	.reporteBI{
 	width: 95%;
 	height: 600px
+	}
 }
 
 @media screen and (min-width:960px){
 	.reporteBI{
 	width: 95%;
 	height: 700px;
+	}
 }	
 @media screen and (min-width:1140px){
 	.reporteBI{
 	width: 95%;
 	height: 800px;
 }
-
+}
 @media screen and (min-width:1140px){
 	.reporteBI{
 	width: 95%;

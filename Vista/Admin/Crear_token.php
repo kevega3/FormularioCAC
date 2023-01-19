@@ -63,8 +63,7 @@
                             </p>
                         </div>
     <br>
-                        <select data-placeholder="¿Aquien se le va a preguntar?" multiple class="chosen-select" name="SelectRol[]" id="SelectRol" required style="width: 100%;">
-                            <option disabled selected style="width: 100%;">¿Aquien se le va a preguntar?</option>
+                        <select multiple class="chosen-select" name="SelectRol[]" id="SelectRol" required style="width: 100%;">
                             <option value="1">Líderes de negocio</option>
                             <option value="2">Usuarios de Negocio</option>
                             <option value="3">Lideres de Tecnología</option>

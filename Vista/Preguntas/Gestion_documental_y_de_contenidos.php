@@ -48,8 +48,7 @@ echo "<script>pruebita('ContGraciasGestiondocumental');</script>";
                             }elseif($ValTipoPregunta == 'MultiSelect'){
                             ?>
                         <select data-placeholder="Seleccione uno o varios"  multiselect-hide-x="true"  multiple class="chosen-select " name="<?php echo "GestionDocu". $contador?>[]"  id="<?php echo "GestionDocu". $contador ?>">
-                            <option disabled selected value="" required>Seleccione uno o varios</option>
-                            <?php    
+                                                        <?php    
                             }
                             $TraerRespuestas= "SELECT * FROM `bancorespuesta` WHERE TipoPregunta = '$TipoRespuesta'"; 
                             $ResRespuestas=  mysqli_query($conn,$TraerRespuestas);

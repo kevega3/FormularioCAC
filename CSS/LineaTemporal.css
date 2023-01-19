@@ -293,8 +293,8 @@ Main Components
     border-color: green;
   }
   .cd-horizontal-timeline .events a.respoIntro::after {
-    background-color: #1b075f;
-    border-color: #1b075f;
+    background-color: #5d45aa;
+    border-color: #5d45aa;
   }
   .events-content li.enter-right,  .events-content li.leave-right {
     -webkit-animation-name: cd-enter-right;
