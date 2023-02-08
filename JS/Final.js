@@ -5,7 +5,7 @@ window.onload = function() {
         },
         function(res) {
             if (res == 1) {
-                location.href = "https://cuentadealtocosto.org/siscac_users/CUESTIONARIOCAC/Vista/Gracias.php";
+                location.href = "https://cuentadealtocosto.org/CUESTIONARIOCAC/Vista/Gracias.php";
             } else {
                 alert("Error porfavor Comuniquese con el admin");
             }

@@ -43,11 +43,11 @@
 						if($Report2 == 1 || $Report2 == '1' ){
 					?>
                     <li onclick="RemoveIntro1()"><a id="btnli2" href="#0" data-date="01/01/2010"
-                            class="respo">Arquitectura Em.</a></li>
+                            class="respo">Arquitectura empresarial</a></li>
                     <?php  
 						}else{
 					?>
-                    <li onclick="RemoveIntro1()"><a id="btnli2" href="#0" data-date="01/01/2010">Arquitectura Em.</a>
+                    <li onclick="RemoveIntro1()"><a id="btnli2" href="#0" data-date="01/01/2010">Arquitectura empresarial</a>
                     </li>
                     <?php 
 						}

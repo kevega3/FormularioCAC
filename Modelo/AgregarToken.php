@@ -7,7 +7,6 @@ $x=0;
 $y=10;
 $Strings = '0123456789abcdefghijklmnopqrstuvwxyz';
 $Token = substr(str_shuffle($Strings), $x, $y);
-
     $NombreEntidad = $_REQUEST['NombreEntidad']; 
     $NombrePersona = $_REQUEST['NombrePersona'];
     $Rol = $_POST['RespuestaRol'];

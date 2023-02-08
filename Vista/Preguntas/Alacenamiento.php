@@ -4,8 +4,6 @@
     </h3>
 </div>
 
-
-
 <div id="Calidad" class="tabcontent">
     <?php
     $TraerPreguntas = 'SELECT * FROM preguntas INNER JOIN areaconocimiento ON preguntas.idAreaCon = areaconocimiento.idAreaConocimiento WHERE idAreaCon = 1' ;

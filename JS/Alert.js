@@ -110,7 +110,6 @@ function Alamacenamiento() {
                 text: 'Intentalo mas tarde o comunicate con el admin',
               })
             }
-            alert(res);
           })
       }
     }
